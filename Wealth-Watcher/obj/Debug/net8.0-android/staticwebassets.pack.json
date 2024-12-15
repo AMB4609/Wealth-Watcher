@@ -1,0 +1,45 @@
+{
+  "Files": [
+    {
+      "Id": "G:\\YEAR 3\\Application Development\\Coursework\\Wealth-Watcher\\obj\\Debug\\net8.0-android\\scopedcss\\bundle\\Wealth-Watcher.styles.css",
+      "PackagePath": "staticwebassets\\Wealth-Watcher.styles.css"
+    },
+    {
+      "Id": "G:\\YEAR 3\\Application Development\\Coursework\\Wealth-Watcher\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "G:\\YEAR 3\\Application Development\\Coursework\\Wealth-Watcher\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "G:\\YEAR 3\\Application Development\\Coursework\\Wealth-Watcher\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "G:\\YEAR 3\\Application Development\\Coursework\\Wealth-Watcher\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "G:\\YEAR 3\\Application Development\\Coursework\\Wealth-Watcher\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-android\\staticwebassets\\msbuild.Wealth-Watcher.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-android\\staticwebassets\\msbuild.build.Wealth-Watcher.props",
+      "PackagePath": "build\\Wealth-Watcher.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-android\\staticwebassets\\msbuild.buildMultiTargeting.Wealth-Watcher.props",
+      "PackagePath": "buildMultiTargeting\\Wealth-Watcher.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-android\\staticwebassets\\msbuild.buildTransitive.Wealth-Watcher.props",
+      "PackagePath": "buildTransitive\\Wealth-Watcher.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
