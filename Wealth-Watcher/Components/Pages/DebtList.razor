@@ -1,0 +1,73 @@
+﻿@page "/debts"
+@using Wealth_Watcher.Model
+@inject Wealth_Watcher.Services.IDebtService debtService
+
+<MudPaper Class="my-2 p-4" Elevation="1">
+    <MudText Typo="Typo.h4">Debts</MudText>
+
+    <MudText Typo="Typo.h5" Color="Color.Primary">Pending Debts</MudText>
+    <MudTable Dense Bordered Striped>
+        <HeaderContent>
+            <MudTh>Debt Code</MudTh>
+            <MudTh>Source</MudTh>
+            <MudTh>Due Date</MudTh>
+            <MudTh>Total Price</MudTh>
+            <MudTh>Status</MudTh>
+        </HeaderContent>
+        <RowTemplate>
+            @foreach (var debt in pendingDebts)
+            {
+                <MudTr>
+                    <MudTd>@debt.DebtId</MudTd>
+                    <MudTd>@debt.Source</MudTd>
+                    <MudTd>@debt.DueDate.ToShortDateString()</MudTd>
+                    <MudTd>@debt.Amount.ToString("C")</MudTd>
+                    <MudTd><MudButton Color="Color.Error" OnClick="@(() => ClearDebt(debt))">Clear</MudButton></MudTd>
+                </MudTr>
+            }
+        </RowTemplate>
+    </MudTable>
+
+    <MudText Typo="Typo.h5" Color="Color.Secondary">Cleared Debts</MudText>
+    <MudTable Dense Bordered>
+        <HeaderContent>
+            <MudTh>Debt Code</MudTh>
+            <MudTh>Source</MudTh>
+            <MudTh>Due Date</MudTh>
+            <MudTh>Total Price</MudTh>
+            <MudTh>Status</MudTh>
+        </HeaderContent>
+        <RowTemplate>
+            @foreach (var debt in clearedDebts)
+            {
+                <MudTr>
+                    <MudTd>@debt.DebtId</MudTd>
+                    <MudTd>@debt.Source</MudTd>
+                    <MudTd>@debt.DueDate.ToShortDateString()</MudTd>
+                    <MudTd>@debt.Amount.ToString("C")</MudTd>
+                    <MudTd>Cleared</MudTd>
+                </MudTr>
+            }
+        </RowTemplate>
+    </MudTable>
+</MudPaper>
+
+@code {
+    private List<Debt> pendingDebts;
+    private List<Debt> clearedDebts;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var debts = await debtService.GetAllDebtsAsync();
+        pendingDebts = debts.Where(d => !d.cleared).ToList();
+        clearedDebts = debts.Where(d => d.cleared).ToList();
+    }
+
+    private async Task ClearDebt(Debt debt)
+    {
+        debt.cleared = true;
+        await debtService.UpdateDebt(debt);
+        pendingDebts.Remove(debt);
+        clearedDebts.Add(debt);
+    }
+}

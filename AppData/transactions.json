@@ -1,0 +1,12 @@
+[
+  {
+    "transactionCode": 1,
+    "userId": 1,
+    "title": "test transaction",
+    "amount": 1000.0,
+    "type": "Income",
+    "transactionDate": "0001-01-01T00:00:00",
+    "note": null,
+    "tags": "Personal"
+  }
+]

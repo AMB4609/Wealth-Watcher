@@ -12,11 +12,13 @@ namespace Wealth_Watcher.Services.UserServiceImpl.cs
     {
         private List<User> users = new List<User>();
         private readonly string _filePath;
+        private UserSessionService _userSessionService;
 
-        public UserService(string filePath)
+        public UserService(string filePath, UserSessionService userSessionService)
         {
             _filePath = filePath;
             LoadUsers();
+            _userSessionService = userSessionService;
         }
 
         public void LoadUsers()
@@ -30,6 +32,14 @@ namespace Wealth_Watcher.Services.UserServiceImpl.cs
 
         public User HandleRegistration(User newUser)
         {
+            if (users.Any())
+            {
+                newUser.userId = users.Max(u => u.userId) + 1;
+            }
+            else
+            {
+                newUser.userId = 1; 
+            }
             users.Add(newUser);
             File.WriteAllText(_filePath, JsonConvert.SerializeObject(users));
             newUser = new User();
@@ -39,9 +49,11 @@ namespace Wealth_Watcher.Services.UserServiceImpl.cs
 
         public bool Login(User loginUser)
         {
-            var isValidUser = users.Any(u => u.userName == loginUser.userName && u.password == loginUser.password);
-            if (isValidUser)
+            var user = users.FirstOrDefault(u => u.userName == loginUser.userName && u.password == loginUser.password);
+
+            if (user != null)
             {
+                _userSessionService.SetUser(user);
                 return true;
             }
             else

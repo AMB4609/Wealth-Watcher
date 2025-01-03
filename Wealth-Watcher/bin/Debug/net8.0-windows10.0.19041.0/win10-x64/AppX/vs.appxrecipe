@@ -30,13 +30,13 @@
     <AppXManifest Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-01-03T12:19:35.106</Modified>
+      <Modified>2025-01-03T15:39:54.173</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2025-01-01T16:23:20.612</Modified>
+      <Modified>2025-01-03T15:34:28.039</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Wealth-Watcher.runtimeconfig.json">
       <PackagePath>Wealth-Watcher.runtimeconfig.json</PackagePath>
@@ -44,11 +44,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Wealth-Watcher.dll">
       <PackagePath>Wealth-Watcher.dll</PackagePath>
-      <Modified>2025-01-03T12:19:34.846</Modified>
+      <Modified>2025-01-03T15:34:27.003</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>Wealth-Watcher.exe</PackagePath>
-      <Modified>2025-01-03T12:19:34.850</Modified>
+      <Modified>2025-01-03T15:34:27.049</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -304,7 +304,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Wealth-Watcher.deps.json">
       <PackagePath>Wealth-Watcher.deps.json</PackagePath>
-      <Modified>2025-01-01T16:23:20.364</Modified>
+      <Modified>2025-01-03T15:34:27.833</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\legion\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.34\lib\net6.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>

@@ -1,0 +1,46 @@
+﻿using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Wealth_Watcher.Model;
+
+
+namespace Wealth_Watcher.Services.NewFolder
+{
+
+    public class DebtService : IDebtService
+    {
+        private readonly string _filePath;
+        private List<Debt> debts = new List<Debt>();
+        public DebtService(string filePath)
+        {
+            _filePath = filePath;
+            LoadUsers();
+        }
+
+        public void LoadUsers()
+        {
+            if (File.Exists(_filePath))
+            {
+                var jsonData = File.ReadAllText(_filePath);
+                debts = JsonConvert.DeserializeObject<List<Debt>>(jsonData) ?? new List<Debt>();
+            }
+        }
+        public void addDebt(Debt newDebt)
+        {
+            if (debts.Any())
+            {
+                newDebt.debtId = debts.Max(d => d.debtId) + 1;
+            }
+            else
+            {
+                newDebt.debtId = 1;
+            }
+            debts.Add(newDebt); 
+            File.WriteAllText(_filePath, JsonConvert.SerializeObject(debts));
+        }
+    }
+}
