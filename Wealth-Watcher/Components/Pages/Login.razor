@@ -1,0 +1,67 @@
+﻿@page "/"
+@using Wealth_Watcher.Model
+@inject Wealth_Watcher.Services.IUserService userService
+@inject NavigationManager NavigationManager
+
+<style>
+    .center-vertically {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; /* Ensure items are centered horizontally in the container */
+    }
+
+    .flex-row {
+        display: flex;
+        gap: 20px;
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        width: 100%; /* Take full width to allow centering */
+    }
+
+    .flex-item {
+        flex: 1;
+    }
+</style>
+
+<MudPaper Elevation="1" Class="pa-4 mx-auto center-vertically" Style="max-width: 500px; margin-top:200px;">
+    <div class="text-center">
+        <div class="flex-row">
+            <img src="../Images/logo.png" alt="Logo" style="height: 40px; width: 40px;">
+            <MudText Typo="Typo.body1" style="color : #6a994e">Wealth Watcher</MudText>
+        </div>
+        <MudText Typo="Typo.h4" GutterBottom="true">Welcome Back!</MudText>
+    </div>
+
+    <MudForm style="width: 400px">
+        <MudTextField T="string" Label="Username" Variant="Variant.Outlined" FullWidth @bind-value="LoginUser.userName" />
+        <MudTextField T="string" Label="Password" Variant="Variant.Outlined" FullWidth InputType="InputType.Password" @bind-value="LoginUser.password" />
+        <h5>@errorMessage</h5>
+        <MudButton Style="background-color: #6a994e; color: white;" Variant="Variant.Filled" Color="Color.Primary" FullWidth OnClick="@HandleLogin">Login</MudButton>
+    </MudForm>
+    <div class="mt-4 text-center">
+        Don't have an account? <button style="color : #6a994e " @onclick="GoToRegister">Join us</button>
+    </div>
+</MudPaper>
+
+@code {
+    private User LoginUser = new User();
+    private string errorMessage;
+
+    private async Task HandleLogin()
+    {
+        if (userService.Login(LoginUser))
+        {
+            NavigationManager.NavigateTo("/dashboard");
+        }
+        else
+        {
+            errorMessage = "Enter Valid Details";
+        }
+
+    }
+    private void GoToRegister()
+    {
+        NavigationManager.NavigateTo("/register");
+    }
+}

@@ -1,0 +1,36 @@
+﻿@page "/addDebt"
+
+<h3>AddDebt</h3>
+
+<div class="flex justify-center items-center" style="padding-top: 100px;">
+    <MudPaper Elevation="2" Square Class="pa-4" Style="background-color: white; max-height: 800px; overflow: auto;">
+        <MudGrid>
+            <MudItem xs="12" sm="6" Class="mb-4">
+                <MudTextField T="string" Label="Source" Placeholder="Enter Title" FullWidth />
+            </MudItem>
+            <MudItem xs="12" sm="6" Class="mb-4">
+                <MudTextField T="string" Label="Price" Placeholder="Enter Price" FullWidth />
+            </MudItem>
+            <MudItem xs="12" sm="6" Class="mb-4">
+                <MudDatePicker T="DateTime?" Label="Due Date" PickerLabel="Select Date" FullWidth />
+            </MudItem>
+            <MudItem xs="12" sm="6" Class="mb-4">
+                <MudSelect T="string" Label="Status" Placeholder="Enter Tags" FullWidth>
+                    <MudSelectItem Value=@("Unpaid") />
+                    <MudSelectItem Value=@("Paid") />
+                    <MudSelectItem Value=@("Overdue") />
+                </MudSelect>
+            </MudItem>
+            <MudItem xs="12" style="display: flex; justify-content: flex-end; padding-top: 20px;">
+                <MudButton Variant="Variant.Filled" Color="Color.Primary">Add Debt</MudButton>
+            </MudItem>
+        </MudGrid>
+    </MudPaper>
+</div>
+
+
+
+
+@code {
+
+}

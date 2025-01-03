@@ -1,17 +1,30 @@
 ﻿@inherits LayoutComponentBase
+@inject NavigationManager NavManager
+<MudThemeProvider />
+<MudPopoverProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
 
 <div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
+    @if (!isLoginPage())
+    {
+        <div class="sidebar" style = "max-width: 200px;">
+            <NavMenu />
+        </div>
+    }
+    
 
     <main>
-        <div class="top-row px-4">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
-        </div>
-
-        <article class="content px-4">
+        <article class="content px-4" style = "padding-top: 60px">
             @Body
         </article>
     </main>
 </div>
+@code { 
+    private bool isLoginPage()
+    {
+        // Adjust the condition based on your application's URL structure and routing
+        var path = NavManager.ToAbsoluteUri(NavManager.Uri).PathAndQuery;
+        return path == "/" || path.StartsWith("/login") || path.StartsWith("/register");
+    }
+}

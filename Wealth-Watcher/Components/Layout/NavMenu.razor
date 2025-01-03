@@ -1,27 +1,19 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="">Wealth-Watcher</a>
-    </div>
-</div>
-
-<input type="checkbox" title="Navigation menu" class="navbar-toggler" />
-
-<div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
-    <nav class="flex-column">
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="counter">
-                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Counter
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="weather">
-                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Weather
-            </NavLink>
-        </div>
-    </nav>
-</div>
+﻿<style>
+    .custom-nav-link.active {
+        color: #ffffff; /* White text for active state */
+        background-color: #007bff; /* Blue background for active state */
+    }
+</style>
+<MudAppBar Style="background-color: #ffffff; max-height: 50px;">
+    <img src="../Images/logo.png" alt="Logo" style="height: 40px; width: 40px;">
+    <MudText Typo="Typo.body1" style="color: #6a994e">Wealth Watcher</MudText>
+</MudAppBar>
+<MudLayout Style="background-color: #f2e8cf; padding-top: 60px;">
+    <MudNavMenu>
+        <MudNavLink Icon="@Icons.Material.Filled.Dashboard" Href="/dashboard" Match="NavLinkMatch.All" Class="custom-nav-link">Dashboard</MudNavLink>
+        <MudNavLink Icon="@Icons.Material.Filled.AccountBalanceWallet" Href="/weather" Class="custom-nav-link">Transactions</MudNavLink>
+        <MudNavLink Icon="@Icons.Material.Filled.MoneyOff" Href="#" Class="custom-nav-link">Debts</MudNavLink>
+        <MudNavLink Icon="@Icons.Material.Filled.AddBox" Href="#" Class="custom-nav-link">Add Transactions</MudNavLink>
+        <MudNavLink Icon="@Icons.Material.Filled.AddCircleOutline" Href="/addDebt" Class="custom-nav-link">Add Debts</MudNavLink>
+    </MudNavMenu>
+</MudLayout>
