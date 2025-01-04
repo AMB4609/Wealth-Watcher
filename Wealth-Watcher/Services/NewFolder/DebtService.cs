@@ -42,5 +42,20 @@ namespace Wealth_Watcher.Services.NewFolder
             debts.Add(newDebt); 
             File.WriteAllText(_filePath, JsonConvert.SerializeObject(debts));
         }
+        public async Task<List<Debt>> GetAllDebtsAsync()
+        {
+            return await Task.FromResult(debts);
+        }
+
+        public async Task UpdateDebt(Debt updatedDebt)
+        {
+            var index = debts.FindIndex(d => d.debtId == updatedDebt.debtId);
+            if (index != -1)
+            {
+                debts[index] = updatedDebt;
+                var jsonData = JsonConvert.SerializeObject(debts, Formatting.Indented);
+                await File.WriteAllTextAsync(_filePath, jsonData);
+            }
+        }
     }
 }

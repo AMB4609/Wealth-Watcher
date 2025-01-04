@@ -9,6 +9,8 @@ namespace Wealth_Watcher.Services
 {
     public interface IDebtService
     {
+        Task<List<Debt>> GetAllDebtsAsync();
+        Task UpdateDebt(Debt updatedDebt);
         void addDebt(Debt newDebt);
     }
 }

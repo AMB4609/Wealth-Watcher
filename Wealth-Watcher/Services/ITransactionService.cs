@@ -10,5 +10,6 @@ namespace Wealth_Watcher.Services
     public interface ITransactionService
     {
         void AddTransaction(Transaction newTransaction);
+        List<Transaction> GetAllTransactionsAsync();
     }
 }

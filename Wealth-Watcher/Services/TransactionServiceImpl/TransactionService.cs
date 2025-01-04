@@ -30,10 +30,14 @@ namespace Wealth_Watcher.Services
             }
             else
             {
-                newTransaction.transactionCode = 1; 
+                newTransaction.transactionCode = 1;
             }
-            transactions.Add(newTransaction); 
+            transactions.Add(newTransaction);
             File.WriteAllText(_filePath, JsonConvert.SerializeObject(transactions, Formatting.Indented));
+        }
+        public List<Transaction> GetAllTransactionsAsync()
+        {
+            return transactions;
         }
     }
 }

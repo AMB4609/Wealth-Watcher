@@ -1,0 +1,150 @@
+﻿@page "/transactions"
+@using MudBlazor
+@inject ISnackbar Snackbar
+@using Wealth_Watcher.Model
+@inject Wealth_Watcher.Services.ITransactionService transactionService
+
+<MudContainer>
+    <MudText Typo="Typo.h4" GutterBottom="true">Transaction History</MudText>
+
+    <MudPaper Elevation="1" Class="pa-4 my-2">
+        <MudGrid Justify="Justify.SpaceBetween">
+            <MudItem xs="12" sm="6" md="3">
+                <MudSelect Label="Date Range" T="string" @bind-Value="selectedDateRange">
+                    <MudSelectItem Value=@("today") Text="Today" />
+                    <MudSelectItem Value=@("this_week") Text="This Week" />
+                    <MudSelectItem Value=@("this_month") Text="This Month" />
+                    <MudSelectItem Value=@("this_year") Text="This Year" />
+                    <MudSelectItem Value=@("All_Time") Text="All Time" />
+                </MudSelect>
+            </MudItem>
+            <MudItem xs="12" sm="6" md="3">
+                <MudSelect Label="Type" T="string" @bind-Value="selectedType">
+                    <MudSelectItem Value=@("All") Text="All" />
+                    <MudSelectItem Value=@("Income") Text="Inflow" />
+                    <MudSelectItem Value=@("Expense") Text="Outflow" />
+                </MudSelect>
+            </MudItem>
+            <MudItem xs="12" sm="6" md="3">
+                <MudSelect @bind-Value="selectedTag" Label="Tags" FullWidth>
+                    <MudSelectItem Value=@("Personal") />
+                    <MudSelectItem Value=@("Business") />
+                    <MudSelectItem Value=@("Monthly") />
+                    <MudSelectItem Value=@("Rent") />
+                    <MudSelectItem Value=@("Grocery") />
+                    <MudSelectItem Value=@("Salary") />
+                    <MudSelectItem Value=@("Other") />
+                    <MudSelectItem Value=@("All") Text="All" />
+                </MudSelect>
+            </MudItem>
+            <MudItem xs="12" sm="6" md="3">
+                <MudTextField Label="Search by name" @bind-Value="searchText" AdornmentIcon="Icons.Filled.Search" Adornment="Adornment.End" />
+            </MudItem>
+        </MudGrid>
+    </MudPaper>
+
+    <MudGrid Justify="Justify.SpaceBetween" AlignItems="AlignItems.Center" Class="mt-2">
+        <MudItem>
+            <MudText Typo="Typo.h6">Total Transactions:  @sortedTransactions.Count()</MudText>
+        </MudItem>
+        <MudItem>
+            <MudSelect T="string" @bind-Value="selectedSortOption" Label="Sort by">
+                <MudSelectItem Value=@("Code") Text="Code" />
+                <MudSelectItem Value=@("Date") Text="Date" />
+            </MudSelect>
+        </MudItem>
+    </MudGrid>
+    <MudTable T="Transaction" Items="@sortedTransactions" Dense Bordered Striped>
+        <HeaderContent>
+            <MudTh>@transactionCode</MudTh>
+            <MudTh>@transactionDate</MudTh>
+            <MudTh>@Title</MudTh>
+            <MudTh>@Tags</MudTh>
+            <MudTh>@Type</MudTh>
+            <MudTh>@TotalPrice</MudTh>
+        </HeaderContent>
+        <RowTemplate >
+            <MudTd DataLabel=@transactionCode>@context.transactionCode</MudTd>
+            <MudTd DataLabel=@transactionDate>@context.transactionDate</MudTd>
+            <MudTd DataLabel=@Title>@context.title</MudTd>
+            <MudTd DataLabel=@Type>@context.tags</MudTd>
+            <MudTd DataLabel="Type">@context.type</MudTd>
+            <MudTd DataLabel="Total Price">@context.amount.ToString("C")</MudTd>
+        </RowTemplate>
+    </MudTable>
+</MudContainer>
+
+@code {
+    private string selectedSortOption = "Code";
+    private string selectedType = "All";
+    private string selectedTag = "All";
+    private string selectedDateRange = "All_Time";
+    private String transactionCode = "Transaction Code";
+    private String transactionDate = "Transaction Date";
+    private String Title = "Title";
+    private String Tags = "Tags";
+    private String Type = "Type";
+    private String TotalPrice = "Total Price";
+    private MudTable<Transaction> table;
+    private List<Transaction> transactions;
+    private string searchText;
+    private IEnumerable<Transaction> sortedTransactions => SortTransactions(FilterTransactions());
+    private bool IsInDateRange(Transaction transaction)
+    {
+        var now = DateTime.Now;
+        switch (selectedDateRange)
+        {
+            case "today":
+                return transaction.transactionDate == now.Date;
+            case "this_week":
+                var startOfWeek = now.AddDays(-(int)now.DayOfWeek);
+                var endOfWeek = startOfWeek.AddDays(7).AddSeconds(-1);
+                return transaction.transactionDate >= startOfWeek && transaction.transactionDate <= endOfWeek;
+            case "this_month":
+                var startOfMonth = new DateTime(now.Year, now.Month, 1);
+                var endOfMonth = startOfMonth.AddMonths(1).AddDays(-1);
+                return transaction.transactionDate >= startOfMonth && transaction.transactionDate <= endOfMonth;
+            case "this_year":
+                var startOfYear = new DateTime(now.Year, 1, 1);
+                var endOfYear = new DateTime(now.Year + 1, 1, 1).AddDays(-1);
+                return transaction.transactionDate >= startOfYear && transaction.transactionDate <= endOfYear;
+            default:
+                return true;
+        }
+    }
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        transactions =   transactionService.GetAllTransactionsAsync();
+    }
+    private IEnumerable<Transaction> FilterTransactions()
+    {
+        var filtered = transactions.AsQueryable();
+
+        if (!string.IsNullOrEmpty(selectedType) && selectedType != "All")
+        {
+            filtered = filtered.Where(t => t.type == selectedType);
+        }
+
+        if (selectedTag != null && selectedTag.Any() && selectedTag != "All")
+        {
+            filtered = filtered.Where(t => t.tags == selectedTag);
+        }
+
+        return filtered.Where(t => IsInDateRange(t));
+    }
+    private IEnumerable<Transaction> SortTransactions(IEnumerable<Transaction> filteredTransactions)
+    {
+        switch (selectedSortOption)
+        {
+            case "Code":
+                return filteredTransactions.OrderBy(t => t.transactionCode);
+            case "Date":
+                return filteredTransactions.OrderBy(t => t.transactionDate);
+            default:
+                return transactions;
+        }
+    }
+
+}

@@ -32,7 +32,7 @@
                 </MudSelect>
             </MudItem>
             <MudItem xs="12" sm="6" Class="mb-4">
-                <MudDatePicker @bind-Value="newTransaction.transactionDate" Label="Transaction Date" PickerLabel="Select Date" FullWidth />
+                <MudDatePicker @bind-Date="newTransaction.transactionDate" Label="Transaction Date" PickerLabel="Select Date" FullWidth/>
             </MudItem>
             <MudItem xs="12" style="display: flex; justify-content: flex-end; padding-top: 20px;">
                 <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="HandleAddTransaction">Add Transaction</MudButton>
@@ -42,6 +42,7 @@
 </div>
 
 @code {
+    private DateTime? _date = DateTime.Today;
     private Transaction newTransaction = new Transaction();
     private string errorMessage;
 

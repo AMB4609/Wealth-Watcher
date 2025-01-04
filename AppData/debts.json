@@ -1,0 +1,26 @@
+[
+  {
+    "debtId": 1,
+    "userId": 1,
+    "price": 2342,
+    "source": "sdfgsdfg",
+    "dueDate": "0001-01-01T00:00:00",
+    "cleared": true
+  },
+  {
+    "debtId": 2,
+    "userId": 1,
+    "price": 1000,
+    "source": "test",
+    "dueDate": "0001-01-01T00:00:00",
+    "cleared": true
+  },
+  {
+    "debtId": 3,
+    "userId": 1,
+    "price": 3000,
+    "source": "asdfasfd",
+    "dueDate": null,
+    "cleared": true
+  }
+]
