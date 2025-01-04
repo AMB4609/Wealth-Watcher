@@ -11,5 +11,10 @@ namespace Wealth_Watcher.Services
     {
         void AddTransaction(Transaction newTransaction);
         List<Transaction> GetAllTransactionsAsync();
+        decimal GetTotalInflows();
+        decimal GetTotalOutflows();
+
+        void AdjustInflowForClearedDebt(decimal amount);
+        void AdjustOutflowForClearedDebt(decimal amount);
     }
 }

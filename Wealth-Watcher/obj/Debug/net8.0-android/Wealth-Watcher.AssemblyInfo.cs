@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Wealth-Watcher")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+1963528d67103bc4b5dd88efbe136146455a3f59")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+9d8a2a8ecb2384fe084325fe0f031bf11f62f10a")]
 [assembly: System.Reflection.AssemblyProductAttribute("Wealth-Watcher")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Wealth-Watcher")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

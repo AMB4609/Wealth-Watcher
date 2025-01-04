@@ -57,5 +57,15 @@ namespace Wealth_Watcher.Services.NewFolder
                 await File.WriteAllTextAsync(_filePath, jsonData);
             }
         }
+        public decimal GetTotalClearedDebt()
+        {
+
+            return debts.Where(t => t.cleared.Equals(true)).Sum(t => t.price);
+        }
+
+        public decimal GetTotalPendingDebt()
+        {
+            return debts.Where(t => t.cleared.Equals(false)).Sum(t => t.price);
+        }
     }
 }

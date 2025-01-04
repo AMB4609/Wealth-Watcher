@@ -12,5 +12,7 @@ namespace Wealth_Watcher.Services
         Task<List<Debt>> GetAllDebtsAsync();
         Task UpdateDebt(Debt updatedDebt);
         void addDebt(Debt newDebt);
+        decimal GetTotalPendingDebt();
+        decimal GetTotalClearedDebt();
     }
 }

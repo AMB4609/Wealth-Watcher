@@ -1,6 +1,7 @@
 ﻿@page "/debts"
 @using Wealth_Watcher.Model
 @inject Wealth_Watcher.Services.IDebtService DebtService
+@inject Wealth_Watcher.Services.ITransactionService transactionService
 
 <h1>Debts</h1>
 <h2 style="color: blue;">Pending Debts</h2>
@@ -88,6 +89,8 @@
     {
         debt.cleared = true;
         await DebtService.UpdateDebt(debt);
+        transactionService.AdjustInflowForClearedDebt(debt.price);
+        transactionService.AdjustOutflowForClearedDebt(debt.price);
         pendingDebts.Remove(debt);
         clearedDebts.Add(debt);
     }

@@ -22,5 +22,37 @@
     "source": "asdfasfd",
     "dueDate": null,
     "cleared": true
+  },
+  {
+    "debtId": 4,
+    "userId": 1,
+    "price": 1000,
+    "source": "good",
+    "dueDate": null,
+    "cleared": true
+  },
+  {
+    "debtId": 5,
+    "userId": 0,
+    "price": 700000,
+    "source": "asdfasdf",
+    "dueDate": null,
+    "cleared": true
+  },
+  {
+    "debtId": 6,
+    "userId": 1,
+    "price": 1000,
+    "source": "asdfasdf",
+    "dueDate": null,
+    "cleared": true
+  },
+  {
+    "debtId": 7,
+    "userId": 1,
+    "price": 10000,
+    "source": "asdfasdf",
+    "dueDate": "2025-01-04T00:00:00",
+    "cleared": true
   }
 ]

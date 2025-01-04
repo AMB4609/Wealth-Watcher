@@ -1,5 +1,64 @@
 ﻿@page "/dashboard"
+@using Wealth_Watcher.Model
+@inject Wealth_Watcher.Services.IDebtService DebtService
+@inject Wealth_Watcher.Services.ITransactionService transactionService
+@inject Wealth_Watcher.Services.IDebtService debtService
+<style>
+    .mud-table-cell, .mud-table-head-cell {
+        padding: 12px; /* Increase padding if needed */
+        text-align: left; /* Adjust text alignment as needed */
+    }
+</style>
 
-<h1>Hello, world!</h1>
 
-Welcome to your new app.
+<MudGrid>
+    <MudItem xs="6" sm="3">
+        <MudPaper Class="pa-4" Style="background-color: green; color: white;">Total Inflows<br>@totalInflows</MudPaper>
+    </MudItem>
+    <MudItem xs="6" sm="3">
+        <MudPaper Class="pa-4" Style="background-color: red; color: white;">Total OutFlows<br>@totalOutflows</MudPaper>
+    </MudItem>
+    <MudItem xs="6" sm="3">
+        <MudPaper Class="pa-4" Style="background-color: darkred; color: white;">Pending Debt<br>@pendingDebt</MudPaper>
+    </MudItem>
+    <MudItem xs="6" sm="3">
+        <MudPaper Class="pa-4" Style="background-color: darkgreen; color: white;">Cleared Debt<br>@clearedDebt</MudPaper>
+    </MudItem>
+</MudGrid>
+<MudPaper Class="mt-4 p-4">
+    <MudText Typo="Typo.h5" Class="my-2" Style="color: blue;">Pending Debts</MudText>
+    <MudTable T="Debt" Items="pendingDebts" Hover="true" Striped="true" Bordered="true" Dense="false">
+        <HeaderContent>
+            <MudTh>@Source</MudTh>
+            <MudTh>@DueDate</MudTh>
+            <MudTh>@TotalPrice</MudTh>
+        </HeaderContent>
+        <RowTemplate Context="debt">
+            <MudTd>@debt.source</MudTd>
+            <MudTd>@debt.dueDate</MudTd>
+            <MudTd>@debt.price.ToString("C")</MudTd>
+        </RowTemplate>
+    </MudTable>
+</MudPaper>
+@code {
+    private decimal totalInflows;
+    private decimal totalOutflows;
+    private decimal pendingDebt;
+    private decimal clearedDebt;
+    private List<Transaction> transactions;
+    private List<Debt> pendingDebts;
+    private String PendingDebts = "Pending Debts";
+    private String Source = "Source";
+    private String DueDate = "Due Date";
+    private String TotalPrice = "Total Price";
+    protected override async Task OnInitializedAsync()
+    {
+        var debts = await DebtService.GetAllDebtsAsync();
+        pendingDebts = debts.Where(d => !d.cleared).ToList();
+        totalInflows =  transactionService.GetTotalInflows();
+        totalOutflows = transactionService.GetTotalOutflows();
+        pendingDebt = debtService.GetTotalPendingDebt();
+        clearedDebt = debtService.GetTotalClearedDebt();
+        StateHasChanged();
+    }
+}

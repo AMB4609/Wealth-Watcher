@@ -39,5 +39,39 @@ namespace Wealth_Watcher.Services
         {
             return transactions;
         }
+        public decimal GetTotalInflows()
+        {
+
+            return transactions.Where(t => t.type.Equals("Inflow")).Sum(t => t.amount);
+        }
+
+        public decimal GetTotalOutflows()
+        {
+            return transactions.Where(t => t.type.Equals("Outflow")).Sum(t => t.amount);
+        }
+        public void AdjustInflowForClearedDebt(decimal amount)
+        {
+            var adjustmentTransaction = new Transaction
+            {
+                amount = -amount, 
+                transactionDate = DateTime.Now,
+                type = "Inflow",
+                title = "Adjustment for cleared debt"
+            };
+            AddTransaction(adjustmentTransaction);
+        }
+
+        public void AdjustOutflowForClearedDebt(decimal amount)
+        {
+            var adjustmentTransaction = new Transaction
+            {
+                amount = amount,
+                transactionDate = DateTime.Now,
+                type = "Outflow",
+                title = "Adjustment for cleared debt"
+            };
+            AddTransaction(adjustmentTransaction);
+        }
+
     }
 }

@@ -4,7 +4,7 @@
     "userId": 1,
     "title": "bad",
     "amount": 1000.0,
-    "type": "Income",
+    "type": "Inflow",
     "transactionDate": null,
     "note": null,
     "tags": "Business"
@@ -14,7 +14,7 @@
     "userId": 1,
     "title": "asdfasdf",
     "amount": 333.0,
-    "type": "Expense",
+    "type": "Outflow",
     "transactionDate": "2025-01-05T00:00:00",
     "note": null,
     "tags": "Business"
@@ -24,9 +24,89 @@
     "userId": 1,
     "title": "asdfasdf",
     "amount": 34343.0,
-    "type": "Income",
+    "type": "Outflow",
     "transactionDate": "2024-12-04T00:00:00",
     "note": null,
     "tags": "Business"
+  },
+  {
+    "transactionCode": 4,
+    "userId": 0,
+    "title": "Adjustment for cleared debt",
+    "amount": -700000.0,
+    "type": "Inflow",
+    "transactionDate": "2025-01-04T22:06:12.8348924+05:45",
+    "note": null,
+    "tags": null
+  },
+  {
+    "transactionCode": 5,
+    "userId": 0,
+    "title": "Adjustment for cleared debt",
+    "amount": 700000.0,
+    "type": "Outflow",
+    "transactionDate": "2025-01-04T22:06:12.8385376+05:45",
+    "note": null,
+    "tags": null
+  },
+  {
+    "transactionCode": 6,
+    "userId": 0,
+    "title": "Adjustment for cleared debt",
+    "amount": -1000.0,
+    "type": "Inflow",
+    "transactionDate": "2025-01-04T22:06:28.3780898+05:45",
+    "note": null,
+    "tags": null
+  },
+  {
+    "transactionCode": 7,
+    "userId": 0,
+    "title": "Adjustment for cleared debt",
+    "amount": 1000.0,
+    "type": "Outflow",
+    "transactionDate": "2025-01-04T22:06:28.3784898+05:45",
+    "note": null,
+    "tags": null
+  },
+  {
+    "transactionCode": 8,
+    "userId": 0,
+    "title": "Adjustment for cleared debt",
+    "amount": -1000.0,
+    "type": "Inflow",
+    "transactionDate": "2025-01-04T22:54:37.8699581+05:45",
+    "note": null,
+    "tags": null
+  },
+  {
+    "transactionCode": 9,
+    "userId": 0,
+    "title": "Adjustment for cleared debt",
+    "amount": 1000.0,
+    "type": "Outflow",
+    "transactionDate": "2025-01-04T22:54:37.8732163+05:45",
+    "note": null,
+    "tags": null
+  },
+  {
+    "transactionCode": 10,
+    "userId": 0,
+    "title": "Adjustment for cleared debt",
+    "amount": -10000.0,
+    "type": "Inflow",
+    "transactionDate": "2025-01-04T23:00:47.3082007+05:45",
+    "note": null,
+    "tags": null
+  },
+  {
+    "transactionCode": 11,
+    "userId": 0,
+    "title": "Adjustment for cleared debt",
+    "amount": 10000.0,
+    "type": "Outflow",
+    "transactionDate": "2025-01-04T23:00:47.3112366+05:45",
+    "note": null,
+    "tags": null
   }
 ]

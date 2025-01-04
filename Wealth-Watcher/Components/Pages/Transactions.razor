@@ -48,6 +48,9 @@
             <MudText Typo="Typo.h6">Total Transactions:  @sortedTransactions.Count()</MudText>
         </MudItem>
         <MudItem>
+            <MudText Typo="Typo.h6">Transactions Total:  @transactionAmount</MudText>
+        </MudItem>
+        <MudItem>
             <MudSelect T="string" @bind-Value="selectedSortOption" Label="Sort by">
                 <MudSelectItem Value=@("Code") Text="Code" />
                 <MudSelectItem Value=@("Date") Text="Date" />
@@ -69,7 +72,7 @@
             <MudTd DataLabel=@Title>@context.title</MudTd>
             <MudTd DataLabel=@Type>@context.tags</MudTd>
             <MudTd DataLabel="Type">@context.type</MudTd>
-            <MudTd DataLabel="Total Price">@context.amount.ToString("C")</MudTd>
+            <MudTd DataLabel="Total Amount">@context.amount.ToString("C")</MudTd>
         </RowTemplate>
     </MudTable>
 </MudContainer>
@@ -89,6 +92,7 @@
     private List<Transaction> transactions;
     private string searchText;
     private IEnumerable<Transaction> sortedTransactions => SortTransactions(FilterTransactions());
+    private decimal transactionAmount => sortedTransactions.Sum(t => t.amount);
     private bool IsInDateRange(Transaction transaction)
     {
         var now = DateTime.Now;
@@ -130,6 +134,10 @@
         if (selectedTag != null && selectedTag.Any() && selectedTag != "All")
         {
             filtered = filtered.Where(t => t.tags == selectedTag);
+        }
+        if (!string.IsNullOrEmpty(searchText))
+        {
+            filtered = filtered.Where(t => t.title != null && t.title.Contains(searchText, StringComparison.OrdinalIgnoreCase));
         }
 
         return filtered.Where(t => IsInDateRange(t));

@@ -2,6 +2,7 @@
 @using Wealth_Watcher.Model
 @inject Wealth_Watcher.Services.IDebtService debtService
 @inject Wealth_Watcher.Services.UserSessionService UserSession
+@inject Wealth_Watcher.Services.ITransactionService transactionService
 
 <h3>AddDebt</h3>
 <h3>@errorMessage</h3>
@@ -15,7 +16,7 @@
                 <MudTextField @bind-Value="newDebt.price" T="int" Label="Price" Placeholder="Enter Price" FullWidth />
             </MudItem>
             <MudItem xs="12" sm="6" Class="mb-4">
-                <MudDatePicker @bind-Value="newDebt.dueDate" T="DateTime?" Label="Due Date" PickerLabel="Select Date" FullWidth />
+                <MudDatePicker @bind-Date="newDebt.dueDate" T="DateTime?" Label="Due Date" PickerLabel="Select Date" FullWidth />
             </MudItem>
             <MudItem xs="12" sm="6" Class="mb-4">
                 <MudSelect T="string" @bind-Value="debtStatus" Label="Status" Placeholder="Enter Tags" FullWidth>
@@ -51,6 +52,8 @@
             else
             {
                 newDebt.cleared = true;
+                transactionService.AdjustInflowForClearedDebt(newDebt.price);
+                transactionService.AdjustOutflowForClearedDebt(newDebt.price);
             }
             debtService.addDebt(newDebt);
             newDebt = new Debt();
