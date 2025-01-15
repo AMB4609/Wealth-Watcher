@@ -67,5 +67,35 @@ namespace Wealth_Watcher.Services.NewFolder
         {
             return debts.Where(t => t.cleared.Equals(false)).Sum(t => t.price);
         }
+
+        public async Task<List<Debt>> GetAllDebtsDashboardAsync(DateTime? startDate, DateTime? endDate)
+        {
+            IEnumerable<Debt> filteredDebts = debts;
+            if (startDate.HasValue && endDate.HasValue)
+            {
+                filteredDebts = filteredDebts.Where(d => d.dueDate >= startDate.Value && d.dueDate <= endDate.Value);
+            }
+            return await Task.FromResult(filteredDebts.ToList());
+        }
+
+        public decimal GetTotalPendingDebtDashboard(DateTime? startDate, DateTime? endDate)
+        {
+            var filteredDebts = debts.Where(d => !d.cleared);
+            if (startDate.HasValue && endDate.HasValue)
+            {
+                filteredDebts = filteredDebts.Where(d => d.dueDate >= startDate.Value && d.dueDate <= endDate.Value);
+            }
+            return filteredDebts.Sum(d => d.price);
+        }
+        public decimal GetTotalClearedDebtDashboard(DateTime? startDate, DateTime? endDate)
+        {
+            var filteredDebts = debts.Where(d => d.cleared);
+            if (startDate.HasValue && endDate.HasValue)
+            {
+                filteredDebts = filteredDebts.Where(d => d.dueDate >= startDate.Value && d.dueDate <= endDate.Value);
+            }
+            return filteredDebts.Sum(d => d.price);
+        }
+
     }
 }

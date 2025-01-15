@@ -10,9 +10,10 @@ namespace Wealth_Watcher.Services
     public interface IDebtService
     {
         Task<List<Debt>> GetAllDebtsAsync();
+        Task<List<Debt>> GetAllDebtsDashboardAsync(DateTime? startDate, DateTime? endDate);
         Task UpdateDebt(Debt updatedDebt);
         void addDebt(Debt newDebt);
-        decimal GetTotalPendingDebt();
-        decimal GetTotalClearedDebt();
+        decimal GetTotalPendingDebtDashboard(DateTime? startDate, DateTime? endDate);
+        decimal GetTotalClearedDebtDashboard(DateTime? startDate,DateTime? endDate);
     }
 }

@@ -2,33 +2,9 @@
   {
     "debtId": 1,
     "userId": 1,
-    "price": 100000,
-    "source": "Bank Loan",
-    "dueDate": "2025-01-10T00:00:00",
-    "cleared": true
-  },
-  {
-    "debtId": 2,
-    "userId": 0,
-    "price": 50000,
-    "source": "Car EMI ",
-    "dueDate": "2025-01-11T00:00:00",
-    "cleared": true
-  },
-  {
-    "debtId": 3,
-    "userId": 0,
-    "price": 1700,
-    "source": "Spotify Subscription",
-    "dueDate": "2025-01-01T00:00:00",
-    "cleared": true
-  },
-  {
-    "debtId": 4,
-    "userId": 1,
-    "price": 45000,
-    "source": "Borrow from a friend",
-    "dueDate": "2025-01-03T00:00:00",
+    "price": 10000,
+    "source": "test debt",
+    "dueDate": "2025-01-18T00:00:00",
     "cleared": true
   }
 ]

@@ -89,8 +89,7 @@
     {
         debt.cleared = true;
         await DebtService.UpdateDebt(debt);
-        transactionService.AdjustInflowForClearedDebt(debt.price);
-        transactionService.AdjustOutflowForClearedDebt(debt.price);
+        transactionService.AdjustmentForClearedDebt(debt.price);
         pendingDebts.Remove(debt);
         clearedDebts.Add(debt);
     }

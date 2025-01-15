@@ -30,25 +30,25 @@
     <AppXManifest Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-01-05T02:09:54.010</Modified>
+      <Modified>2025-01-15T15:51:33.612</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2025-01-03T15:34:28.039</Modified>
+      <Modified>2025-01-13T16:56:49.219</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Wealth-Watcher.runtimeconfig.json">
       <PackagePath>Wealth-Watcher.runtimeconfig.json</PackagePath>
-      <Modified>2024-12-30T16:46:54.785</Modified>
+      <Modified>2025-01-13T16:56:49.030</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Wealth-Watcher.dll">
       <PackagePath>Wealth-Watcher.dll</PackagePath>
-      <Modified>2025-01-05T02:09:52.396</Modified>
+      <Modified>2025-01-15T15:51:32.622</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>Wealth-Watcher.exe</PackagePath>
-      <Modified>2025-01-05T02:09:52.570</Modified>
+      <Modified>2025-01-15T15:51:32.677</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -76,23 +76,23 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
-      <Modified>2024-12-15T15:17:43.180</Modified>
+      <Modified>2025-01-13T16:44:15.035</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
       <PackagePath>splashSplashScreen.scale-125.png</PackagePath>
-      <Modified>2024-12-15T15:17:43.197</Modified>
+      <Modified>2025-01-13T16:44:15.048</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
       <PackagePath>splashSplashScreen.scale-150.png</PackagePath>
-      <Modified>2024-12-15T15:17:43.218</Modified>
+      <Modified>2025-01-13T16:44:15.073</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
       <PackagePath>splashSplashScreen.scale-200.png</PackagePath>
-      <Modified>2024-12-15T15:17:43.262</Modified>
+      <Modified>2025-01-13T16:44:15.104</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
       <PackagePath>splashSplashScreen.scale-400.png</PackagePath>
-      <Modified>2024-12-15T15:17:43.385</Modified>
+      <Modified>2025-01-13T16:44:15.244</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
       <PackagePath>OpenSans-Regular.ttf</PackagePath>
@@ -100,211 +100,211 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
-      <Modified>2024-12-15T15:17:44.879</Modified>
+      <Modified>2025-01-13T16:44:17.076</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
       <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
-      <Modified>2024-12-15T15:17:44.874</Modified>
+      <Modified>2025-01-13T16:44:17.066</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
       <PackagePath>appiconLargeTile.scale-125.png</PackagePath>
-      <Modified>2024-12-15T15:17:44.874</Modified>
+      <Modified>2025-01-13T16:44:17.066</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
       <PackagePath>appiconLargeTile.scale-150.png</PackagePath>
-      <Modified>2024-12-15T15:17:44.874</Modified>
+      <Modified>2025-01-13T16:44:17.066</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
       <PackagePath>appiconLargeTile.scale-200.png</PackagePath>
-      <Modified>2024-12-15T15:17:44.874</Modified>
+      <Modified>2025-01-13T16:44:17.066</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
       <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
-      <Modified>2024-12-15T15:17:44.874</Modified>
+      <Modified>2025-01-13T16:44:17.065</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-16.png</PackagePath>
-      <Modified>2024-12-15T15:17:44.877</Modified>
+      <Modified>2025-01-13T16:44:17.073</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-24.png</PackagePath>
-      <Modified>2024-12-15T15:17:44.877</Modified>
+      <Modified>2025-01-13T16:44:17.072</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-256.png</PackagePath>
-      <Modified>2024-12-15T15:17:44.877</Modified>
+      <Modified>2025-01-13T16:44:17.071</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-32.png</PackagePath>
-      <Modified>2024-12-15T15:17:44.877</Modified>
+      <Modified>2025-01-13T16:44:17.072</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-48.png</PackagePath>
-      <Modified>2024-12-15T15:17:44.877</Modified>
+      <Modified>2025-01-13T16:44:17.072</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-16.png</PackagePath>
-      <Modified>2024-12-15T15:17:44.878</Modified>
+      <Modified>2025-01-13T16:44:17.073</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-24.png</PackagePath>
-      <Modified>2024-12-15T15:17:44.878</Modified>
+      <Modified>2025-01-13T16:44:17.073</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-256.png</PackagePath>
-      <Modified>2024-12-15T15:17:44.877</Modified>
+      <Modified>2025-01-13T16:44:17.073</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-32.png</PackagePath>
-      <Modified>2024-12-15T15:17:44.878</Modified>
+      <Modified>2025-01-13T16:44:17.073</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-48.png</PackagePath>
-      <Modified>2024-12-15T15:17:44.878</Modified>
+      <Modified>2025-01-13T16:44:17.073</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
       <PackagePath>appiconLogo.scale-100.png</PackagePath>
-      <Modified>2024-12-15T15:17:44.879</Modified>
+      <Modified>2025-01-13T16:44:17.076</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
       <PackagePath>appiconLogo.scale-125.png</PackagePath>
-      <Modified>2024-12-15T15:17:44.879</Modified>
+      <Modified>2025-01-13T16:44:17.075</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
       <PackagePath>appiconLogo.scale-150.png</PackagePath>
-      <Modified>2024-12-15T15:17:44.879</Modified>
+      <Modified>2025-01-13T16:44:17.075</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
       <PackagePath>appiconLogo.scale-200.png</PackagePath>
-      <Modified>2024-12-15T15:17:44.879</Modified>
+      <Modified>2025-01-13T16:44:17.075</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
       <PackagePath>appiconLogo.scale-400.png</PackagePath>
-      <Modified>2024-12-15T15:17:44.879</Modified>
+      <Modified>2025-01-13T16:44:17.075</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
       <PackagePath>appiconLogo.targetsize-16.png</PackagePath>
-      <Modified>2024-12-15T15:17:44.879</Modified>
+      <Modified>2025-01-13T16:44:17.074</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
       <PackagePath>appiconLogo.targetsize-24.png</PackagePath>
-      <Modified>2024-12-15T15:17:44.878</Modified>
+      <Modified>2025-01-13T16:44:17.074</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
       <PackagePath>appiconLogo.targetsize-256.png</PackagePath>
-      <Modified>2024-12-15T15:17:44.878</Modified>
+      <Modified>2025-01-13T16:44:17.074</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
       <PackagePath>appiconLogo.targetsize-32.png</PackagePath>
-      <Modified>2024-12-15T15:17:44.878</Modified>
+      <Modified>2025-01-13T16:44:17.074</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
       <PackagePath>appiconLogo.targetsize-48.png</PackagePath>
-      <Modified>2024-12-15T15:17:44.878</Modified>
+      <Modified>2025-01-13T16:44:17.074</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
       <PackagePath>appiconMediumTile.scale-100.png</PackagePath>
-      <Modified>2024-12-15T15:17:44.876</Modified>
+      <Modified>2025-01-13T16:44:17.068</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
       <PackagePath>appiconMediumTile.scale-125.png</PackagePath>
-      <Modified>2024-12-15T15:17:44.875</Modified>
+      <Modified>2025-01-13T16:44:17.068</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
       <PackagePath>appiconMediumTile.scale-150.png</PackagePath>
-      <Modified>2024-12-15T15:17:44.875</Modified>
+      <Modified>2025-01-13T16:44:17.068</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
       <PackagePath>appiconMediumTile.scale-200.png</PackagePath>
-      <Modified>2024-12-15T15:17:44.875</Modified>
+      <Modified>2025-01-13T16:44:17.068</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
       <PackagePath>appiconMediumTile.scale-400.png</PackagePath>
-      <Modified>2024-12-15T15:17:44.875</Modified>
+      <Modified>2025-01-13T16:44:17.068</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
       <PackagePath>appiconSmallTile.scale-100.png</PackagePath>
-      <Modified>2024-12-15T15:17:44.876</Modified>
+      <Modified>2025-01-13T16:44:17.070</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
       <PackagePath>appiconSmallTile.scale-125.png</PackagePath>
-      <Modified>2024-12-15T15:17:44.876</Modified>
+      <Modified>2025-01-13T16:44:17.070</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
       <PackagePath>appiconSmallTile.scale-150.png</PackagePath>
-      <Modified>2024-12-15T15:17:44.876</Modified>
+      <Modified>2025-01-13T16:44:17.068</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
       <PackagePath>appiconSmallTile.scale-200.png</PackagePath>
-      <Modified>2024-12-15T15:17:44.876</Modified>
+      <Modified>2025-01-13T16:44:17.068</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
       <PackagePath>appiconSmallTile.scale-400.png</PackagePath>
-      <Modified>2024-12-15T15:17:44.876</Modified>
+      <Modified>2025-01-13T16:44:17.068</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
       <PackagePath>appiconStoreLogo.scale-100.png</PackagePath>
-      <Modified>2024-12-15T15:17:44.877</Modified>
+      <Modified>2025-01-13T16:44:17.071</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
       <PackagePath>appiconStoreLogo.scale-125.png</PackagePath>
-      <Modified>2024-12-15T15:17:44.877</Modified>
+      <Modified>2025-01-13T16:44:17.071</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
       <PackagePath>appiconStoreLogo.scale-150.png</PackagePath>
-      <Modified>2024-12-15T15:17:44.876</Modified>
+      <Modified>2025-01-13T16:44:17.071</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
       <PackagePath>appiconStoreLogo.scale-200.png</PackagePath>
-      <Modified>2024-12-15T15:17:44.876</Modified>
+      <Modified>2025-01-13T16:44:17.070</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
       <PackagePath>appiconStoreLogo.scale-400.png</PackagePath>
-      <Modified>2024-12-15T15:17:44.876</Modified>
+      <Modified>2025-01-13T16:44:17.070</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
       <PackagePath>appiconWideTile.scale-100.png</PackagePath>
-      <Modified>2024-12-15T15:17:44.875</Modified>
+      <Modified>2025-01-13T16:44:17.067</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
       <PackagePath>appiconWideTile.scale-125.png</PackagePath>
-      <Modified>2024-12-15T15:17:44.875</Modified>
+      <Modified>2025-01-13T16:44:17.067</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
       <PackagePath>appiconWideTile.scale-150.png</PackagePath>
-      <Modified>2024-12-15T15:17:44.875</Modified>
+      <Modified>2025-01-13T16:44:17.067</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
       <PackagePath>appiconWideTile.scale-200.png</PackagePath>
-      <Modified>2024-12-15T15:17:44.875</Modified>
+      <Modified>2025-01-13T16:44:17.067</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
-      <Modified>2024-12-15T15:17:44.874</Modified>
+      <Modified>2025-01-13T16:44:17.067</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
-      <Modified>2024-12-15T15:17:44.880</Modified>
+      <Modified>2025-01-13T16:44:17.077</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
       <PackagePath>dotnet_bot.scale-125.png</PackagePath>
-      <Modified>2024-12-15T15:17:44.880</Modified>
+      <Modified>2025-01-13T16:44:17.077</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
       <PackagePath>dotnet_bot.scale-150.png</PackagePath>
-      <Modified>2024-12-15T15:17:44.880</Modified>
+      <Modified>2025-01-13T16:44:17.076</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
       <PackagePath>dotnet_bot.scale-200.png</PackagePath>
-      <Modified>2024-12-15T15:17:44.880</Modified>
+      <Modified>2025-01-13T16:44:17.076</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
-      <Modified>2024-12-15T15:17:44.879</Modified>
+      <Modified>2025-01-13T16:44:17.076</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Wealth-Watcher.deps.json">
       <PackagePath>Wealth-Watcher.deps.json</PackagePath>
-      <Modified>2025-01-03T15:34:27.833</Modified>
+      <Modified>2025-01-13T16:56:48.955</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\legion\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.34\lib\net6.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>
@@ -700,11 +700,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\scopedcss\bundle\Wealth-Watcher.styles.css">
       <PackagePath>wwwroot\Wealth-Watcher.styles.css</PackagePath>
-      <Modified>2024-12-15T15:17:41.235</Modified>
+      <Modified>2025-01-13T16:06:18.868</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\scopedcss\projectbundle\Wealth-Watcher.bundle.scp.css">
       <PackagePath>wwwroot\Wealth-Watcher.bundle.scp.css</PackagePath>
-      <Modified>2024-12-15T15:17:41.236</Modified>
+      <Modified>2025-01-13T16:06:18.870</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\Components\Layout\MainLayout.razor.css">
       <PackagePath>Components\Layout\MainLayout.razor.css</PackagePath>

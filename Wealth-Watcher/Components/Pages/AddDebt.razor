@@ -52,8 +52,7 @@
             else
             {
                 newDebt.cleared = true;
-                transactionService.AdjustInflowForClearedDebt(newDebt.price);
-                transactionService.AdjustOutflowForClearedDebt(newDebt.price);
+                transactionService.AdjustmentForClearedDebt(newDebt.price);
             }
             debtService.addDebt(newDebt);
             newDebt = new Debt();

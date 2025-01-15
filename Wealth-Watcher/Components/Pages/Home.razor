@@ -10,55 +10,161 @@
     }
 </style>
 
-
 <MudGrid>
-    <MudItem xs="6" sm="3">
-        <MudPaper Class="pa-4" Style="background-color: green; color: white;">Total Inflows<br>@totalInflows</MudPaper>
+    <MudItem xs="12">
+        <MudPaper Class="p-4">
+            <MudGrid>
+                <MudItem xs="6" md="3">
+                    <MudDatePicker Label="Start Date" @bind-Date="startDate" />
+                </MudItem>
+                <MudItem xs="6" md="3">
+                    <MudDatePicker Label="End Date" @bind-Date="endDate" />
+                </MudItem>
+                <MudItem xs="12" md="3">
+                    <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="LoadData">Filter</MudButton>
+                </MudItem>
+            </MudGrid>
+        </MudPaper>
     </MudItem>
-    <MudItem xs="6" sm="3">
-        <MudPaper Class="pa-4" Style="background-color: red; color: white;">Total OutFlows<br>@totalOutflows</MudPaper>
+    <MudGrid>
+        <MudItem xs="6" sm="3">
+            <MudPaper Class="pa-4" Style="background-color: green; color: white;">Total Inflows<br>@totalInflows</MudPaper>
+        </MudItem>
+        <MudItem xs="6" sm="3">
+            <MudPaper Class="pa-4" Style="background-color: red; color: white;">Total OutFlows<br>@totalOutflows</MudPaper>
+        </MudItem>
+        <MudItem xs="6" sm="3">
+            <MudPaper Class="pa-4" Style="background-color: darkred; color: white;">Pending Debt<br>@pendingDebt</MudPaper>
+        </MudItem>
+        <MudItem xs="6" sm="3">
+            <MudPaper Class="pa-4" Style="background-color: darkgreen; color: white;">Cleared Debt<br>@clearedDebt</MudPaper>
+        </MudItem>
+    </MudGrid>
+    <MudGrid>
+        <MudItem xs="12" sm="6">
+        <MudPaper Class="mt-4 p-4">
+            <MudText Typo="Typo.h5" Class="my-2" Style="color: blue;">Pending Debts</MudText>
+            <MudTable T="Debt" Items="pendingDebts" Hover="true" Striped="true" Bordered="true" Dense="false">
+                <HeaderContent>
+                    <MudTh>@Source</MudTh>
+                    <MudTh>@DueDate</MudTh>
+                    <MudTh>@TotalPrice</MudTh>
+                </HeaderContent>
+                <RowTemplate Context="debt">
+                    <MudTd>@debt.source</MudTd>
+                    <MudTd>@debt.dueDate</MudTd>
+                    <MudTd>@debt.price.ToString("C")</MudTd>
+                </RowTemplate>
+            </MudTable>
+        </MudPaper>
+        </MudItem>
+        <MudItem xs="12" sm="6">
+        <MudPaper Class="mt-4 p-4">
+            <MudText Typo="Typo.h5" Class="my-2" Style="color: blue;">Cleared Debts</MudText>
+            <MudTable T="Debt" Items="clearedDebts" Hover="true" Striped="true" Bordered="true" Dense="false">
+                <HeaderContent>
+                    <MudTh>@Source</MudTh>
+                    <MudTh>@DueDate</MudTh>
+                    <MudTh>@TotalPrice</MudTh>
+                </HeaderContent>
+                <RowTemplate Context="debt">
+                    <MudTd>@debt.source</MudTd>
+                    <MudTd>@debt.dueDate</MudTd>
+                    <MudTd>@debt.price.ToString("C")</MudTd>
+                </RowTemplate>
+            </MudTable>
+        </MudPaper>
     </MudItem>
-    <MudItem xs="6" sm="3">
-        <MudPaper Class="pa-4" Style="background-color: darkred; color: white;">Pending Debt<br>@pendingDebt</MudPaper>
-    </MudItem>
-    <MudItem xs="6" sm="3">
-        <MudPaper Class="pa-4" Style="background-color: darkgreen; color: white;">Cleared Debt<br>@clearedDebt</MudPaper>
-    </MudItem>
+    </MudGrid>
+    <MudGrid>
+        <MudItem xs="12" sm="7">
+        <MudPaper Class="mt-4 p-4">
+                <MudGrid Style="align-items: center;">
+                    <MudItem xs="12" md="8">
+                        <MudText Typo="Typo.h5" Class="my-2" Style="color: navy;">Transactions</MudText>
+                    </MudItem>
+                    <MudItem xs="12" md="4">
+                        <MudSelect T="string" Value="Selection" Label="Type" FullWidth ValueChanged="OnSelectionChange">
+                            <MudSelectItem Value=@("Highest") />
+                            <MudSelectItem Value=@("Lowest") />
+                        </MudSelect>
+                    </MudItem>
+                </MudGrid>
+            <MudTable T="Transaction" Items="topTransactions" Hover="true" Striped="true" Bordered="true" Dense="false">
+                <HeaderContent>
+                    <MudTh>TransactionDate</MudTh>
+                    <MudTh>Amount</MudTh>
+                    <MudTh>Type</MudTh>
+                </HeaderContent>
+                <RowTemplate Context="transaction">
+                    <MudTd>@transaction.transactionDate</MudTd>
+                    <MudTd>@transaction.amount.ToString("C")</MudTd>
+                    <MudTd>@transaction.type</MudTd>
+                </RowTemplate>
+            </MudTable>
+        </MudPaper>
+        </MudItem>
+        <MudItem xs="12" sm="5">
+        <MudPaper Class="mt-4 p-4 mh-500px">
+            <MudText Typo="Typo.h5" Class="my-2">Financial Overview</MudText>
+            <MudChart ChartType="ChartType.Pie" InputData="chartData" />
+        </MudPaper>
+        </MudItem>
+    </MudGrid>
 </MudGrid>
-<MudPaper Class="mt-4 p-4">
-    <MudText Typo="Typo.h5" Class="my-2" Style="color: blue;">Pending Debts</MudText>
-    <MudTable T="Debt" Items="pendingDebts" Hover="true" Striped="true" Bordered="true" Dense="false">
-        <HeaderContent>
-            <MudTh>@Source</MudTh>
-            <MudTh>@DueDate</MudTh>
-            <MudTh>@TotalPrice</MudTh>
-        </HeaderContent>
-        <RowTemplate Context="debt">
-            <MudTd>@debt.source</MudTd>
-            <MudTd>@debt.dueDate</MudTd>
-            <MudTd>@debt.price.ToString("C")</MudTd>
-        </RowTemplate>
-    </MudTable>
-</MudPaper>
 @code {
+    private DateTime? startDate = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
+    private DateTime? endDate = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.DaysInMonth(DateTime.Now.Year, DateTime.Now.Month));
+    private String Selection = "Highest";
+    private Boolean highOrLow = true;
     private decimal totalInflows;
     private decimal totalOutflows;
     private decimal pendingDebt;
     private decimal clearedDebt;
     private List<Transaction> transactions;
     private List<Debt> pendingDebts;
+    private List<Debt> clearedDebts;
     private String PendingDebts = "Pending Debts";
     private String Source = "Source";
     private String DueDate = "Due Date";
     private String TotalPrice = "Total Price";
+    private List<Transaction> topTransactions;
+    private double[] chartData;
     protected override async Task OnInitializedAsync()
     {
-        var debts = await DebtService.GetAllDebtsAsync();
-        pendingDebts = debts.Where(d => !d.cleared).ToList();
-        totalInflows =  transactionService.GetTotalInflows();
-        totalOutflows = transactionService.GetTotalOutflows();
-        pendingDebt = debtService.GetTotalPendingDebt();
-        clearedDebt = debtService.GetTotalClearedDebt();
+        await LoadData();
+    }
+    private async Task UpdateTopTransactions()
+    {
+        if (Selection == "Highest")
+        {
+            highOrLow = true;
+        }
+        else
+        {
+            highOrLow = false;
+        }
+        topTransactions = await transactionService.GetTopTransactionsDashboardAsync(5, highOrLow, startDate, endDate);
         StateHasChanged();
     }
-}
+
+    private async Task OnSelectionChange(string Value)
+    {
+        Selection = Value;
+        await UpdateTopTransactions();
+    }
+    private async Task LoadData()
+    {
+        var debts = await DebtService.GetAllDebtsDashboardAsync(startDate,endDate);
+        pendingDebts = debts.Where(d => !d.cleared).ToList();
+        clearedDebts = debts.Where(d => d.cleared).ToList();
+        totalInflows =  transactionService.GetTotalInflowsDashboard(startDate, endDate);
+        totalOutflows =  transactionService.GetTotalOutflowsDashboard(startDate, endDate);
+        pendingDebt =  debtService.GetTotalPendingDebtDashboard(startDate, endDate);
+        clearedDebt =  debtService.GetTotalClearedDebtDashboard(startDate, endDate);
+        topTransactions = await transactionService.GetTopTransactionsDashboardAsync(5, highOrLow, startDate, endDate);
+        await UpdateTopTransactions();
+        chartData = [(int)totalInflows, (int)totalOutflows, (int)pendingDebt];
+        StateHasChanged();
+    }
+    }

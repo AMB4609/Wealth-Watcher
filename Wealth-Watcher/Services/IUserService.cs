@@ -9,7 +9,7 @@ namespace Wealth_Watcher.Services
 {
     public interface IUserService
     {
-        User HandleRegistration(User newUser);
+        User HandleRegistration(User user);
          bool Login(User loginUser);
     }
 }

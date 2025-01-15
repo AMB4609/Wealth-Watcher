@@ -44,33 +44,63 @@ namespace Wealth_Watcher.Services
 
             return transactions.Where(t => t.type.Equals("Inflow")).Sum(t => t.amount);
         }
-
-        public decimal GetTotalOutflows()
-        {
-            return transactions.Where(t => t.type.Equals("Outflow")).Sum(t => t.amount);
-        }
-        public void AdjustInflowForClearedDebt(decimal amount)
-        {
-            var adjustmentTransaction = new Transaction
-            {
-                amount = -amount, 
-                transactionDate = DateTime.Now,
-                type = "Inflow",
-                title = "Adjustment for cleared debt"
-            };
-            AddTransaction(adjustmentTransaction);
-        }
-
-        public void AdjustOutflowForClearedDebt(decimal amount)
+        public void AdjustmentForClearedDebt(decimal amount)
         {
             var adjustmentTransaction = new Transaction
             {
                 amount = amount,
                 transactionDate = DateTime.Now,
-                type = "Outflow",
+                type = "Debt",
                 title = "Adjustment for cleared debt"
             };
             AddTransaction(adjustmentTransaction);
+        }
+        public void SaveNoteForTransaction(int transactionCode, string note)
+        {
+            var transaction = transactions.FirstOrDefault(t => t.transactionCode == transactionCode);
+            if (transaction != null)
+            {
+                transaction.note = note;
+                File.WriteAllText(_filePath, JsonConvert.SerializeObject(transactions, Formatting.Indented));
+            }
+        }
+
+        public decimal GetTotalInflowsDashboard(DateTime? startDate, DateTime? endDate)
+        {
+            var filteredTransactions = transactions.Where(t => t.type.Equals("Inflow"));
+            if (startDate.HasValue && endDate.HasValue)
+            {
+                filteredTransactions = filteredTransactions.Where(t => t.transactionDate >= startDate.Value && t.transactionDate <= endDate.Value);
+            }
+            return filteredTransactions.Sum(t => t.amount);
+        }
+
+        public decimal GetTotalOutflowsDashboard(DateTime? startDate, DateTime? endDate)
+        {
+            var filteredTransactions = transactions.Where(t => t.type.Equals("Outflow"));
+            if (startDate.HasValue && endDate.HasValue)
+            {
+                filteredTransactions = filteredTransactions.Where(t => t.transactionDate >= startDate.Value && t.transactionDate <= endDate.Value);
+            }
+            return filteredTransactions.Sum(t => t.amount);
+        }
+
+        public async Task<List<Transaction>> GetTopTransactionsDashboardAsync(int count, bool highOrLow, DateTime? startDate, DateTime? endDate)
+        {
+            if (!transactions.Any())
+            {
+                await Task.Run(() => LoadTransactions());
+            }
+            IEnumerable<Transaction> filteredTransactions = transactions;
+            if (startDate.HasValue && endDate.HasValue)
+            {
+                filteredTransactions = filteredTransactions.Where(t => t.transactionDate >= startDate.Value && t.transactionDate <= endDate.Value);
+            }
+            var sortedTransactions = highOrLow
+                ? filteredTransactions.OrderByDescending(t => t.amount).Take(count).ToList()
+                : filteredTransactions.OrderBy(t => t.amount).Take(count).ToList();
+
+            return sortedTransactions;
         }
 
     }
