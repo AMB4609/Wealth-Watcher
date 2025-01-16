@@ -4,59 +4,63 @@
 @inject NavigationManager NavigationManager
 
 <style>
+    /* Styling for vertically and horizontally centering elements */
     .center-vertically {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center; /* Ensure items are centered horizontally in the container */
+        align-items: center;
     }
 
+    /* Styling for a row with evenly spaced items */
     .flex-row {
         display: flex;
         gap: 20px;
-        justify-content: center; /* Center horizontally */
-        align-items: center; /* Center vertically */
-        width: 100%; /* Take full width to allow centering */
+        justify-content: center;
+        align-items: center;
+        width: 100%;
     }
 
+    /* Styling for flex items to distribute space equally */
     .flex-item {
         flex: 1;
     }
 </style>
 
-
-
+<!-- Main container for registration form -->
 <MudPaper Elevation="1" Class="pa-4 mx-auto center-vertically" Style="max-width: 500px; margin-top:150px;">
     <div class="text-center">
         <div class="flex-row text-center">
             <img src="../Images/logo.png" alt="Logo" style="height: 40px; width: 40px;">
             <MudText Typo="Typo.body1" style="color : #6a994e">Wealth Watcher</MudText>
-    </div>
-    <MudText Typo="Typo.h5" GutterBottom="true">Create</MudText>
-    <MudText Typo="Typo.h5" GutterBottom="true">WealthWatcher account</MudText>
+        </div>
+        <MudText Typo="Typo.h5" GutterBottom="true">Create</MudText>
+        <MudText Typo="Typo.h5" GutterBottom="true">WealthWatcher account</MudText>
     </div>
     <MudForm @ref="form">
+        <!-- Input fields for registration -->
         <MudTextField Label="Username" Variant="Variant.Outlined" FullWidth @bind-Value="user.userName" Required="true" RequiredError="Username is required." />
         <MudTextField Label="Password" Variant="Variant.Outlined" FullWidth InputType="InputType.Password" @bind-Value="user.password" Required="true" RequiredError="Password is required." HelperText="Enter at least 8+ characters" />
         <MudTextField Label="ReType-Password" Variant="Variant.Outlined" FullWidth InputType="InputType.Password" @bind-Value="confirmPassword" Required="true" RequiredError="Please confirm your password." />
 
-
+        <!-- Select inputs for additional user details -->
         <div class="flex-row" style="margin-bottom: 20px;">
-        <MudSelect @bind-Value="user.currencyType" Label="Currency" Placeholder="Please Select" Class="flex-item">
-            <MudSelectItem Value="@("USD")">USD</MudSelectItem>
-            <MudSelectItem Value="@("GBP")">GBP</MudSelectItem>
-            <MudSelectItem Value="@("EUR")">EUR</MudSelectItem>
-        </MudSelect>
-
-        <MudSelect @bind-Value="user.gender" Label="Gender" Placeholder="Please Select" Class="flex-item">
-            <MudSelectItem Value="@("Male")">Male</MudSelectItem>
-            <MudSelectItem Value="@("Female")">Female</MudSelectItem>
-            <MudSelectItem Value="@("Other")">Other</MudSelectItem>
-        </MudSelect>
+            <MudSelect @bind-Value="user.currencyType" Label="Currency" Placeholder="Please Select" Class="flex-item">
+                <MudSelectItem Value="@("USD")">USD</MudSelectItem>
+                <MudSelectItem Value="@("GBP")">GBP</MudSelectItem>
+                <MudSelectItem Value="@("EUR")">EUR</MudSelectItem>
+            </MudSelect>
+            <MudSelect @bind-Value="user.gender" Label="Gender" Placeholder="Please Select" Class="flex-item">
+                <MudSelectItem Value="@("Male")">Male</MudSelectItem>
+                <MudSelectItem Value="@("Female")">Female</MudSelectItem>
+                <MudSelectItem Value="@("Other")">Other</MudSelectItem>
+            </MudSelect>
         </div>
+        <!-- Submit button for the form -->
         <MudButton Variant="Variant.Filled" Style="background-color: #6a994e; color: white;" FullWidth OnClick="@HandleRegistration">Sign up</MudButton>
     </MudForm>
     <h5>@ErrorMessage</h5>
+    <!-- Link to sign in page for existing users -->
     <div class="mt-4 text-center">
         Already have an account? <MudButton Style="color: #6a994e;" Href="/">Sign in</MudButton>
     </div>
@@ -71,26 +75,40 @@
 
     public string ErrorMessage;
 
+
+
+    // Method to handle user registration
+
     private async Task HandleRegistration()
 
     {
+
         await form.Validate();
 
         if (!form.IsValid)
+
         {
 
             ErrorMessage = "Form Not Valid";
 
         }
+
         if (user.password == confirmPassword)
+
         {
 
             userService.HandleRegistration(user);
-            NavigationManager.NavigateTo("/");
+
+            NavigationManager.NavigateTo("/"); // Redirect after successful registration
+
         }
+
         else
+
         {
+
             ErrorMessage = "Passwords do not match.";
+
         }
 
     }

@@ -7,8 +7,10 @@ using Wealth_Watcher.Model;
 
 namespace Wealth_Watcher.Services
 {
+    //Service interface for Debts
     public interface IDebtService
     {
+        // Abstract methods
         Task<List<Debt>> GetAllDebtsAsync();
         Task<List<Debt>> GetAllDebtsDashboardAsync(DateTime? startDate, DateTime? endDate);
         Task UpdateDebt(Debt updatedDebt);

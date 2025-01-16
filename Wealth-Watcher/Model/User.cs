@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.Media.Devices;
 
 namespace Wealth_Watcher.Model
 {
@@ -15,5 +16,6 @@ namespace Wealth_Watcher.Model
         public string password { get; set; }
         public string currencyType { get; set; }
         public string gender { get; set; }
+        public decimal balance { get; set; }
     }
 }

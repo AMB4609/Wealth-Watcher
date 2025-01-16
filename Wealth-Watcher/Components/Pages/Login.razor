@@ -2,30 +2,36 @@
 @using Wealth_Watcher.Model
 @inject Wealth_Watcher.Services.IUserService userService
 @inject NavigationManager NavigationManager
+@inject Wealth_Watcher.Services.UserSessionService currentUser
 
 <style>
+    /* Styling for centering elements vertically and horizontally */
     .center-vertically {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center; /* Ensure items are centered horizontally in the container */
+        align-items: center;
     }
 
+    /* Styling for a flex row with space between items */
     .flex-row {
         display: flex;
         gap: 20px;
-        justify-content: center; /* Center horizontally */
-        align-items: center; /* Center vertically */
-        width: 100%; /* Take full width to allow centering */
+        justify-content: center;
+        align-items: center;
+        width: 100%;
     }
 
+    /* Flex item properties to ensure equal spacing */
     .flex-item {
         flex: 1;
     }
 </style>
 
+<!-- Main paper element for login containing all sub-elements -->
 <MudPaper Elevation="1" Class="pa-4 mx-auto center-vertically" Style="max-width: 500px; margin-top:200px;">
     <div class="text-center">
+        <!-- Logo and app name layout -->
         <div class="flex-row">
             <img src="../Images/logo.png" alt="Logo" style="height: 40px; width: 40px;">
             <MudText Typo="Typo.body1" style="color : #6a994e">Wealth Watcher</MudText>
@@ -33,12 +39,15 @@
         <MudText Typo="Typo.h4" GutterBottom="true">Welcome Back!</MudText>
     </div>
 
+    <!-- Form for login credentials -->
     <MudForm style="width: 400px">
         <MudTextField T="string" Label="Username" Variant="Variant.Outlined" FullWidth @bind-value="LoginUser.userName" />
         <MudTextField T="string" Label="Password" Variant="Variant.Outlined" FullWidth InputType="InputType.Password" @bind-value="LoginUser.password" />
         <h5>@errorMessage</h5>
         <MudButton Style="background-color: #6a994e; color: white;" Variant="Variant.Filled" Color="Color.Primary" FullWidth OnClick="@HandleLogin">Login</MudButton>
     </MudForm>
+
+    <!-- Link to registration page for new users -->
     <div class="mt-4 text-center">
         Don't have an account? <button style="color : #6a994e " @onclick="GoToRegister">Join us</button>
     </div>
@@ -48,18 +57,20 @@
     private User LoginUser = new User();
     private string errorMessage;
 
+    // Method to handle login when form is submitted
     private async Task HandleLogin()
     {
         if (userService.Login(LoginUser))
         {
-            NavigationManager.NavigateTo("/dashboard");
+            NavigationManager.NavigateTo("/dashboard"); // Redirect to dashboard on successful login
         }
         else
         {
-            errorMessage = "Enter Valid Details";
+            errorMessage = "Enter Valid Details"; // Display error message on failed login
         }
-
     }
+
+    // Navigation method to registration page
     private void GoToRegister()
     {
         NavigationManager.NavigateTo("/register");

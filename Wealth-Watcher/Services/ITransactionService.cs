@@ -7,8 +7,10 @@ using Wealth_Watcher.Model;
 
 namespace Wealth_Watcher.Services
 {
+    // Interface for managing financial transactions
     public interface ITransactionService
     {
+        // abstract methods
         void AddTransaction(Transaction newTransaction);
         List<Transaction> GetAllTransactionsAsync();
         decimal GetTotalInflows();

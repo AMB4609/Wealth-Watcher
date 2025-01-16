@@ -2,9 +2,14 @@
 @using Wealth_Watcher.Model
 @inject Wealth_Watcher.Services.IDebtService DebtService
 @inject Wealth_Watcher.Services.ITransactionService transactionService
+@inject Wealth_Watcher.Services.IUserService userService
 
+<!-- Main title for the debts page -->
 <h1>Debts</h1>
+
+<!-- Heading for pending debts section -->
 <h2 style="color: blue;">Pending Debts</h2>
+<!-- Table for listing pending debts -->
 <table class="table">
     <thead>
         <tr>
@@ -19,7 +24,7 @@
         @foreach (var debt in pendingDebts)
         {
             <tr>
-                <td>@(debt.debtId)</td>
+                <td>@debt.debtId</td>
                 <td>@debt.source</td>
                 <td>@debt.dueDate</td>
                 <td>@debt.price</td>
@@ -29,7 +34,9 @@
     </tbody>
 </table>
 
+<!-- Heading for cleared debts section -->
 <h2 style="color: green;">Cleared Debts</h2>
+<!-- Table for listing cleared debts -->
 <table class="table">
     <thead>
         <tr>
@@ -56,21 +63,23 @@
 
 <style>
     .table {
-        width: 100%;
-        border-collapse: collapse;
+        width: 100%; /* Sets table width to full container width */
+        border-collapse: collapse; /* Ensures borders between cells are merged */
     }
+
     th, td {
-        border: 1px solid black;
-        padding: 8px;
-        text-align: left;
+        border: 1px solid black; /* Adds a solid border to table headers and cells */
+        padding: 8px; /* Adds space inside headers and cells */
+        text-align: left; /* Aligns text to the left */
     }
+
     .button-clear {
-        color: white;
-        background-color: red;
-        padding: 5px 10px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
+        color: white; /* Text color for 'Clear' button */
+        background-color: red; /* Background color for 'Clear' button */
+        padding: 5px 10px; /* Padding inside the 'Clear' button */
+        border: none; /* Removes border from the 'Clear' button */
+        border-radius: 5px; /* Rounds corners of the 'Clear' button */
+        cursor: pointer; /* Changes cursor to pointer on hover over the 'Clear' button */
     }
 </style>
 
@@ -80,17 +89,18 @@
 
     protected override async Task OnInitializedAsync()
     {
-        var debts = await DebtService.GetAllDebtsAsync();
-        pendingDebts = debts.Where(d => !d.cleared).ToList();
-        clearedDebts = debts.Where(d => d.cleared).ToList();
+        var debts = await DebtService.GetAllDebtsAsync(); // Fetches all debts
+        pendingDebts = debts.Where(d => !d.cleared).ToList(); // Filters for pending debts
+        clearedDebts = debts.Where(d => d.cleared).ToList(); // Filters for cleared debts
     }
 
     private async Task ClearDebt(Debt debt)
     {
-        debt.cleared = true;
-        await DebtService.UpdateDebt(debt);
-        transactionService.AdjustmentForClearedDebt(debt.price);
-        pendingDebts.Remove(debt);
-        clearedDebts.Add(debt);
+        debt.cleared = true; // Marks the debt as cleared
+        userService.UpdateBalanceDebt(debt);//updates balance in user
+        await DebtService.UpdateDebt(debt); // Updates the debt status in the database
+        transactionService.AdjustmentForClearedDebt(debt.price); // Adjusts the financial transactions for the cleared debt
+        pendingDebts.Remove(debt); // Removes the debt from the pending list
+        clearedDebts.Add(debt); // Adds the debt to the cleared list
     }
 }

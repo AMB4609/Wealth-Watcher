@@ -2,9 +2,9 @@
   {
     "debtId": 1,
     "userId": 1,
-    "price": 10000,
-    "source": "test debt",
-    "dueDate": "2025-01-18T00:00:00",
+    "price": 20000,
+    "source": "asdfasdf",
+    "dueDate": "2025-01-16T00:00:00",
     "cleared": true
   }
 ]

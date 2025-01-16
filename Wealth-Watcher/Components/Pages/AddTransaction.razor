@@ -2,25 +2,33 @@
 @using Wealth_Watcher.Model
 @inject Wealth_Watcher.Services.ITransactionService transactionService
 @inject Wealth_Watcher.Services.UserSessionService UserSession
+@inject Wealth_Watcher.Services.IUserService userService
 
+<!-- Title and error messages for transaction addition -->
 <h3>Add Transaction</h3>
 <h3>@errorMessage</h3>
 <h3>@exceedOutFlow</h3>
+
+<!-- Main content area for transaction form -->
 <div class="flex justify-center items-center" style="padding-top: 100px;">
     <MudPaper Elevation="2" Square Class="pa-4" Style="background-color: white; max-height: 800px; overflow: auto;">
         <MudGrid>
+            <!-- Text field for transaction title -->
             <MudItem xs="12" sm="6" Class="mb-4">
                 <MudTextField @bind-Value="newTransaction.title" Label="Title" Placeholder="Enter Title" FullWidth />
             </MudItem>
+            <!-- Text field for transaction amount -->
             <MudItem xs="12" sm="6" Class="mb-4">
                 <MudTextField @bind-Value="newTransaction.amount" Label="Price" Placeholder="Enter Price" FullWidth />
             </MudItem>
+            <!-- Select for transaction type -->
             <MudItem xs="12" sm="6" Class="mb-4">
                 <MudSelect @bind-Value="newTransaction.type" Label="Type" FullWidth>
                     <MudSelectItem Value=@("Inflow") />
                     <MudSelectItem Value=@("Outflow") />
                 </MudSelect>
             </MudItem>
+            <!-- Select for transaction tags -->
             <MudItem xs="12" sm="6" Class="mb-4">
                 <MudSelect @bind-Value="newTransaction.tags" Label="Tags" FullWidth>
                     <MudSelectItem Value=@("Personal") />
@@ -32,9 +40,11 @@
                     <MudSelectItem Value=@("Other") />
                 </MudSelect>
             </MudItem>
+            <!-- Date picker for transaction date -->
             <MudItem xs="12" sm="6" Class="mb-4">
-                <MudDatePicker @bind-Date="newTransaction.transactionDate" Label="Transaction Date" PickerLabel="Select Date" FullWidth/>
+                <MudDatePicker @bind-Date="newTransaction.transactionDate" Label="Transaction Date" PickerLabel="Select Date" FullWidth />
             </MudItem>
+            <!-- Button to add transaction -->
             <MudItem xs="12" style="display: flex; justify-content: flex-end; padding-top: 20px;">
                 <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="HandleAddTransaction">Add Transaction</MudButton>
             </MudItem>
@@ -45,30 +55,36 @@
 @code {
     private DateTime? _date = DateTime.Today;
     private Transaction newTransaction = new Transaction();
-    private string errorMessage;
-    private string exceedOutFlow;
+    private string errorMessage; // Error message for transaction failure
+    private string exceedOutFlow; // Message when outflow exceeds available inflow
 
+    // Initializes the new transaction with the current user ID
     protected override void OnInitialized()
     {
         newTransaction.userId = UserSession.GetCurrentUserId();
     }
 
+    // Handles adding a transaction and checking for outflow limits
     private void HandleAddTransaction()
     {
         try
         {
-            if(newTransaction.type == "Outflow" && transactionService.GetTotalInflows() < newTransaction.amount)
+            // Check if outflow exceeds total inflows
+            if (newTransaction.type == "Outflow" && transactionService.GetTotalInflows() < newTransaction.amount)
             {
                 exceedOutFlow = "You have exceeded the balance you have";
             }
             else
             {
+                // Add the transaction and reset form
+                userService.UpdateBalanceTransaction(newTransaction);
                 transactionService.AddTransaction(newTransaction);
-                newTransaction = new Transaction();
+                newTransaction = new Transaction(); // Reset for new input
             }
         }
         catch (Exception e)
         {
+            // Capture and display any errors
             errorMessage = "Failed adding Transaction: " + e.Message;
         }
     }

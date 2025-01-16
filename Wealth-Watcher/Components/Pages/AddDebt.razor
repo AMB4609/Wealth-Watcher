@@ -3,27 +3,40 @@
 @inject Wealth_Watcher.Services.IDebtService debtService
 @inject Wealth_Watcher.Services.UserSessionService UserSession
 @inject Wealth_Watcher.Services.ITransactionService transactionService
+@inject Wealth_Watcher.Services.IUserService userService
 
-<h3>AddDebt</h3>
+<!-- Main title for the Add Debt page -->
+<h3>Add Debt</h3>
+<!-- Display any error messages -->
 <h3>@errorMessage</h3>
+
+<!-- Centered layout for the debt form -->
 <div class="flex justify-center items-center" style="padding-top: 100px;">
     <MudPaper Elevation="2" Square Class="pa-4" Style="background-color: white; max-height: 800px; overflow: auto;">
         <MudGrid>
+            <!-- Input field for debt source -->
             <MudItem xs="12" sm="6" Class="mb-4">
-                <MudTextField @bind-Value="newDebt.source" T="string" Label="Source" Placeholder="Enter Title" FullWidth />
+                <MudTextField @bind-Value="newDebt.source" T="string" Label="Source" Placeholder="Enter Source" FullWidth
+                              Required="true" HelperText="@((string.IsNullOrEmpty(newDebt.source) ? "Source is required" : string.Empty))" />
             </MudItem>
+            <!-- Input field for debt amount -->
             <MudItem xs="12" sm="6" Class="mb-4">
-                <MudTextField @bind-Value="newDebt.price" T="int" Label="Price" Placeholder="Enter Price" FullWidth />
+                <MudTextField @bind-Value="newDebt.price" T="int" Label="Price" Placeholder="Enter Price" FullWidth
+                              Required="true" HelperText="@((newDebt.price <= 0 ? "Price must be positive" : string.Empty))" />
             </MudItem>
+            <!-- DatePicker for due date of the debt -->
             <MudItem xs="12" sm="6" Class="mb-4">
-                <MudDatePicker @bind-Date="newDebt.dueDate" T="DateTime?" Label="Due Date" PickerLabel="Select Date" FullWidth />
+                <MudDatePicker @bind-Date="newDebt.dueDate" T="DateTime?" Label="Due Date" PickerLabel="Select Date" FullWidth
+                               HelperText="@((newDebt.dueDate < DateTime.Today ? "Due date must be in the future" : string.Empty))" />
             </MudItem>
+            <!-- Select for debt status -->
             <MudItem xs="12" sm="6" Class="mb-4">
-                <MudSelect T="string" @bind-Value="debtStatus" Label="Status" Placeholder="Enter Tags" FullWidth>
-                    <MudSelectItem Value=@("NotCleared") />
-                    <MudSelectItem Value=@("Cleared") />
+                <MudSelect T="string" @bind-Value="debtStatus" Label="Status" Placeholder="Select Status" FullWidth Required="true">
+                    <MudSelectItem Value=@("NotCleared") Text="Not Cleared" />
+                    <MudSelectItem Value=@("Cleared") Text="Cleared" />
                 </MudSelect>
             </MudItem>
+            <!-- Button to submit the new debt -->
             <MudItem xs="12" style="display: flex; justify-content: flex-end; padding-top: 20px;">
                 <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="HandleAddDebt">Add Debt</MudButton>
             </MudItem>
@@ -32,34 +45,37 @@
 </div>
 
 @code {
+    private Debt newDebt = new Debt();  // Initializes a new instance of the Debt model
+    private string errorMessage;        // Stores error messages
+    private string debtStatus;          // Stores the status of the debt (Cleared/Not Cleared)
 
-    private Debt newDebt = new Debt(); 
-    private string errorMessage;
-    private string debtStatus;
+    // Set the user ID from session when the component is initialized
     protected override void OnInitialized()
     {
-        newDebt.userId = UserSession.GetCurrentUserId(); 
+        newDebt.userId = UserSession.GetCurrentUserId();
     }
 
+    // Handles the addition of a new debt
     private void HandleAddDebt()
     {
         try
         {
-            if(debtStatus == "NotCleared")
+            if (debtStatus == "NotCleared")
             {
                 newDebt.cleared = false;
             }
             else
             {
                 newDebt.cleared = true;
-                transactionService.AdjustmentForClearedDebt(newDebt.price);
+                userService.UpdateBalanceDebt(newDebt);
+                transactionService.AdjustmentForClearedDebt(newDebt.price); // Adjust transactions for cleared debts
             }
             debtService.addDebt(newDebt);
-            newDebt = new Debt();
-        }catch(Exception e)
-        {
-            errorMessage = "Failed adding Debt";
+            newDebt = new Debt(); // Reset the form after successful submission
         }
-
+        catch (Exception e)
+        {
+            errorMessage = "Failed adding Debt: " + e.Message;
+        }
     }
 }
