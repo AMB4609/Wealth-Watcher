@@ -70,7 +70,7 @@
         try
         {
             // Check if outflow exceeds total inflows
-            if (newTransaction.type == "Outflow" && transactionService.GetTotalInflows() < newTransaction.amount)
+            if (newTransaction.type == "Outflow" && userService.GetCurrentBalanceDashboard() < newTransaction.amount)
             {
                 exceedOutFlow = "You have exceeded the balance you have";
             }

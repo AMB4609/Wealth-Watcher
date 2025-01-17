@@ -3,12 +3,32 @@
   "WorkspaceRootPath": "G:\\YEAR 3\\Application Development\\Coursework\\Wealth-Watcher\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{77DDC6AB-6995-4C6C-A133-B64373712248}|Wealth-Watcher.csproj|g:\\year 3\\application development\\coursework\\wealth-watcher\\services\\userserviceimpl.cs\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77DDC6AB-6995-4C6C-A133-B64373712248}|Wealth-Watcher.csproj|solutionrelative:services\\userserviceimpl.cs\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{77DDC6AB-6995-4C6C-A133-B64373712248}|Wealth-Watcher.csproj|g:\\year 3\\application development\\coursework\\wealth-watcher\\components\\pages\\adddebt.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{77DDC6AB-6995-4C6C-A133-B64373712248}|Wealth-Watcher.csproj|solutionrelative:components\\pages\\adddebt.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77DDC6AB-6995-4C6C-A133-B64373712248}|Wealth-Watcher.csproj|g:\\year 3\\application development\\coursework\\wealth-watcher\\components\\pages\\addtransaction.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{77DDC6AB-6995-4C6C-A133-B64373712248}|Wealth-Watcher.csproj|solutionrelative:components\\pages\\addtransaction.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{77DDC6AB-6995-4C6C-A133-B64373712248}|Wealth-Watcher.csproj|g:\\year 3\\application development\\coursework\\wealth-watcher\\services\\transactionserviceimpl\\transactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{77DDC6AB-6995-4C6C-A133-B64373712248}|Wealth-Watcher.csproj|solutionrelative:services\\transactionserviceimpl\\transactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77DDC6AB-6995-4C6C-A133-B64373712248}|Wealth-Watcher.csproj|g:\\year 3\\application development\\coursework\\wealth-watcher\\components\\pages\\transactions.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{77DDC6AB-6995-4C6C-A133-B64373712248}|Wealth-Watcher.csproj|solutionrelative:components\\pages\\transactions.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77DDC6AB-6995-4C6C-A133-B64373712248}|Wealth-Watcher.csproj|g:\\year 3\\application development\\coursework\\wealth-watcher\\components\\pages\\register.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{77DDC6AB-6995-4C6C-A133-B64373712248}|Wealth-Watcher.csproj|solutionrelative:components\\pages\\register.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77DDC6AB-6995-4C6C-A133-B64373712248}|Wealth-Watcher.csproj|g:\\year 3\\application development\\coursework\\wealth-watcher\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{77DDC6AB-6995-4C6C-A133-B64373712248}|Wealth-Watcher.csproj|solutionrelative:components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77DDC6AB-6995-4C6C-A133-B64373712248}|Wealth-Watcher.csproj|g:\\year 3\\application development\\coursework\\wealth-watcher\\services\\userserviceimpl.cs\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77DDC6AB-6995-4C6C-A133-B64373712248}|Wealth-Watcher.csproj|solutionrelative:services\\userserviceimpl.cs\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{77DDC6AB-6995-4C6C-A133-B64373712248}|Wealth-Watcher.csproj|g:\\year 3\\application development\\coursework\\wealth-watcher\\services\\newfolder\\debtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,10 +37,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{77DDC6AB-6995-4C6C-A133-B64373712248}|Wealth-Watcher.csproj|g:\\year 3\\application development\\coursework\\wealth-watcher\\services\\usersessionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{77DDC6AB-6995-4C6C-A133-B64373712248}|Wealth-Watcher.csproj|solutionrelative:services\\usersessionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{77DDC6AB-6995-4C6C-A133-B64373712248}|Wealth-Watcher.csproj|g:\\year 3\\application development\\coursework\\wealth-watcher\\components\\pages\\transactions.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{77DDC6AB-6995-4C6C-A133-B64373712248}|Wealth-Watcher.csproj|solutionrelative:components\\pages\\transactions.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{77DDC6AB-6995-4C6C-A133-B64373712248}|Wealth-Watcher.csproj|g:\\year 3\\application development\\coursework\\wealth-watcher\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -47,24 +63,8 @@
       "RelativeMoniker": "D:0:0:{77DDC6AB-6995-4C6C-A133-B64373712248}|Wealth-Watcher.csproj|solutionrelative:components\\pages\\debtlist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{77DDC6AB-6995-4C6C-A133-B64373712248}|Wealth-Watcher.csproj|g:\\year 3\\application development\\coursework\\wealth-watcher\\components\\pages\\adddebt.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{77DDC6AB-6995-4C6C-A133-B64373712248}|Wealth-Watcher.csproj|solutionrelative:components\\pages\\adddebt.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{77DDC6AB-6995-4C6C-A133-B64373712248}|Wealth-Watcher.csproj|g:\\year 3\\application development\\coursework\\wealth-watcher\\components\\pages\\addtransaction.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{77DDC6AB-6995-4C6C-A133-B64373712248}|Wealth-Watcher.csproj|solutionrelative:components\\pages\\addtransaction.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{77DDC6AB-6995-4C6C-A133-B64373712248}|Wealth-Watcher.csproj|g:\\year 3\\application development\\coursework\\wealth-watcher\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{77DDC6AB-6995-4C6C-A133-B64373712248}|Wealth-Watcher.csproj|solutionrelative:components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{77DDC6AB-6995-4C6C-A133-B64373712248}|Wealth-Watcher.csproj|g:\\year 3\\application development\\coursework\\wealth-watcher\\components\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{77DDC6AB-6995-4C6C-A133-B64373712248}|Wealth-Watcher.csproj|solutionrelative:components\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{77DDC6AB-6995-4C6C-A133-B64373712248}|Wealth-Watcher.csproj|g:\\year 3\\application development\\coursework\\wealth-watcher\\components\\pages\\register.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{77DDC6AB-6995-4C6C-A133-B64373712248}|Wealth-Watcher.csproj|solutionrelative:components\\pages\\register.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{77DDC6AB-6995-4C6C-A133-B64373712248}|Wealth-Watcher.csproj|g:\\year 3\\application development\\coursework\\wealth-watcher\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -86,102 +86,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ITransactionService.cs",
-              "DocumentMoniker": "G:\\YEAR 3\\Application Development\\Coursework\\Wealth-Watcher\\Services\\ITransactionService.cs",
-              "RelativeDocumentMoniker": "Services\\ITransactionService.cs",
-              "ToolTip": "G:\\YEAR 3\\Application Development\\Coursework\\Wealth-Watcher\\Services\\ITransactionService.cs",
-              "RelativeToolTip": "Services\\ITransactionService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-16T10:09:11.736Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "AddTransaction.razor",
-              "DocumentMoniker": "G:\\YEAR 3\\Application Development\\Coursework\\Wealth-Watcher\\Components\\Pages\\AddTransaction.razor",
-              "RelativeDocumentMoniker": "Components\\Pages\\AddTransaction.razor",
-              "ToolTip": "G:\\YEAR 3\\Application Development\\Coursework\\Wealth-Watcher\\Components\\Pages\\AddTransaction.razor",
-              "RelativeToolTip": "Components\\Pages\\AddTransaction.razor",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-16T10:36:43.771Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "UserService.cs",
               "DocumentMoniker": "G:\\YEAR 3\\Application Development\\Coursework\\Wealth-Watcher\\Services\\UserServiceImpl.cs\\UserService.cs",
               "RelativeDocumentMoniker": "Services\\UserServiceImpl.cs\\UserService.cs",
               "ToolTip": "G:\\YEAR 3\\Application Development\\Coursework\\Wealth-Watcher\\Services\\UserServiceImpl.cs\\UserService.cs",
               "RelativeToolTip": "Services\\UserServiceImpl.cs\\UserService.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAiwB4AAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-16T10:05:22.741Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-16T10:05:22.741Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IUserService.cs",
-              "DocumentMoniker": "G:\\YEAR 3\\Application Development\\Coursework\\Wealth-Watcher\\Services\\IUserService.cs",
-              "RelativeDocumentMoniker": "Services\\IUserService.cs",
-              "ToolTip": "G:\\YEAR 3\\Application Development\\Coursework\\Wealth-Watcher\\Services\\IUserService.cs",
-              "RelativeToolTip": "Services\\IUserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-16T10:05:16.092Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "IDebtService.cs",
-              "DocumentMoniker": "G:\\YEAR 3\\Application Development\\Coursework\\Wealth-Watcher\\Services\\IDebtService.cs",
-              "RelativeDocumentMoniker": "Services\\IDebtService.cs",
-              "ToolTip": "G:\\YEAR 3\\Application Development\\Coursework\\Wealth-Watcher\\Services\\IDebtService.cs",
-              "RelativeToolTip": "Services\\IDebtService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-16T11:42:35.754Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DebtService.cs",
-              "DocumentMoniker": "G:\\YEAR 3\\Application Development\\Coursework\\Wealth-Watcher\\Services\\NewFolder\\DebtService.cs",
-              "RelativeDocumentMoniker": "Services\\NewFolder\\DebtService.cs",
-              "ToolTip": "G:\\YEAR 3\\Application Development\\Coursework\\Wealth-Watcher\\Services\\NewFolder\\DebtService.cs",
-              "RelativeToolTip": "Services\\NewFolder\\DebtService.cs",
-              "ViewState": "AgIAAGEAAAAAAAAAAAA6wH0AAAA/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-16T12:47:47.958Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 0,
               "Title": "AddDebt.razor",
               "DocumentMoniker": "G:\\YEAR 3\\Application Development\\Coursework\\Wealth-Watcher\\Components\\Pages\\AddDebt.razor",
               "RelativeDocumentMoniker": "Components\\Pages\\AddDebt.razor",
               "ToolTip": "G:\\YEAR 3\\Application Development\\Coursework\\Wealth-Watcher\\Components\\Pages\\AddDebt.razor",
               "RelativeToolTip": "Components\\Pages\\AddDebt.razor",
-              "ViewState": "AgIAADwAAAAAAAAAAAAAAEUAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAADkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-01-16T09:32:08.49Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 14,
               "Title": "DebtList.razor",
               "DocumentMoniker": "G:\\YEAR 3\\Application Development\\Coursework\\Wealth-Watcher\\Components\\Pages\\DebtList.razor",
               "RelativeDocumentMoniker": "Components\\Pages\\DebtList.razor",
@@ -189,12 +123,11 @@
               "RelativeToolTip": "Components\\Pages\\DebtList.razor",
               "ViewState": "AgIAAA8AAAAAAAAAAAAAAGoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-16T05:49:07.007Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-16T05:49:07.007Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "Home.razor",
               "DocumentMoniker": "G:\\YEAR 3\\Application Development\\Coursework\\Wealth-Watcher\\Components\\Pages\\Home.razor",
               "RelativeDocumentMoniker": "Components\\Pages\\Home.razor",
@@ -202,12 +135,11 @@
               "RelativeToolTip": "Components\\Pages\\Home.razor",
               "ViewState": "AgIAAKAAAAAAAAAAAAAAALQAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-16T04:19:25.376Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-16T04:19:25.376Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "UserSessionService.cs",
               "DocumentMoniker": "G:\\YEAR 3\\Application Development\\Coursework\\Wealth-Watcher\\Services\\UserSessionService.cs",
               "RelativeDocumentMoniker": "Services\\UserSessionService.cs",
@@ -215,12 +147,11 @@
               "RelativeToolTip": "Services\\UserSessionService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwA4AAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-16T09:48:16.96Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-16T09:48:16.96Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "User.cs",
               "DocumentMoniker": "G:\\YEAR 3\\Application Development\\Coursework\\Wealth-Watcher\\Model\\User.cs",
               "RelativeDocumentMoniker": "Model\\User.cs",
@@ -228,64 +159,35 @@
               "RelativeToolTip": "Model\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-16T15:25:58.309Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-16T15:25:58.309Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Transactions.razor",
               "DocumentMoniker": "G:\\YEAR 3\\Application Development\\Coursework\\Wealth-Watcher\\Components\\Pages\\Transactions.razor",
               "RelativeDocumentMoniker": "Components\\Pages\\Transactions.razor",
               "ToolTip": "G:\\YEAR 3\\Application Development\\Coursework\\Wealth-Watcher\\Components\\Pages\\Transactions.razor",
               "RelativeToolTip": "Components\\Pages\\Transactions.razor",
-              "ViewState": "AgIAAMMAAAAAAAAAAAAAAOIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAAAOIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-16T05:49:03.838Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-16T05:49:03.838Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "TransactionService.cs",
               "DocumentMoniker": "G:\\YEAR 3\\Application Development\\Coursework\\Wealth-Watcher\\Services\\TransactionServiceImpl\\TransactionService.cs",
               "RelativeDocumentMoniker": "Services\\TransactionServiceImpl\\TransactionService.cs",
               "ToolTip": "G:\\YEAR 3\\Application Development\\Coursework\\Wealth-Watcher\\Services\\TransactionServiceImpl\\TransactionService.cs",
               "RelativeToolTip": "Services\\TransactionServiceImpl\\TransactionService.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwFoAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAADgAAAAAAAAAAAAgwFsAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-16T09:43:17.69Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-16T09:43:17.69Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Register.razor",
-              "DocumentMoniker": "G:\\YEAR 3\\Application Development\\Coursework\\Wealth-Watcher\\Components\\Pages\\Register.razor",
-              "RelativeDocumentMoniker": "Components\\Pages\\Register.razor",
-              "ToolTip": "G:\\YEAR 3\\Application Development\\Coursework\\Wealth-Watcher\\Components\\Pages\\Register.razor",
-              "RelativeToolTip": "Components\\Pages\\Register.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-16T05:49:04.62Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Login.razor",
-              "DocumentMoniker": "G:\\YEAR 3\\Application Development\\Coursework\\Wealth-Watcher\\Components\\Pages\\Login.razor",
-              "RelativeDocumentMoniker": "Components\\Pages\\Login.razor",
-              "ToolTip": "G:\\YEAR 3\\Application Development\\Coursework\\Wealth-Watcher\\Components\\Pages\\Login.razor",
-              "RelativeToolTip": "Components\\Pages\\Login.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-16T09:49:30.272Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 5,
               "Title": "_Imports.razor",
               "DocumentMoniker": "G:\\YEAR 3\\Application Development\\Coursework\\Wealth-Watcher\\Components\\_Imports.razor",
               "RelativeDocumentMoniker": "Components\\_Imports.razor",
@@ -293,8 +195,91 @@
               "RelativeToolTip": "Components\\_Imports.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-16T13:30:53.852Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-16T13:30:53.852Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Register.razor",
+              "DocumentMoniker": "G:\\YEAR 3\\Application Development\\Coursework\\Wealth-Watcher\\Components\\Pages\\Register.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Register.razor",
+              "ToolTip": "G:\\YEAR 3\\Application Development\\Coursework\\Wealth-Watcher\\Components\\Pages\\Register.razor",
+              "RelativeToolTip": "Components\\Pages\\Register.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-16T05:49:04.62Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AddTransaction.razor",
+              "DocumentMoniker": "G:\\YEAR 3\\Application Development\\Coursework\\Wealth-Watcher\\Components\\Pages\\AddTransaction.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\AddTransaction.razor",
+              "ToolTip": "G:\\YEAR 3\\Application Development\\Coursework\\Wealth-Watcher\\Components\\Pages\\AddTransaction.razor",
+              "RelativeToolTip": "Components\\Pages\\AddTransaction.razor",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAAE0AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-16T10:36:43.771Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DebtService.cs",
+              "DocumentMoniker": "G:\\YEAR 3\\Application Development\\Coursework\\Wealth-Watcher\\Services\\NewFolder\\DebtService.cs",
+              "RelativeDocumentMoniker": "Services\\NewFolder\\DebtService.cs",
+              "ToolTip": "G:\\YEAR 3\\Application Development\\Coursework\\Wealth-Watcher\\Services\\NewFolder\\DebtService.cs",
+              "RelativeToolTip": "Services\\NewFolder\\DebtService.cs",
+              "ViewState": "AgIAAGEAAAAAAAAAAAA6wH0AAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-16T12:47:47.958Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IDebtService.cs",
+              "DocumentMoniker": "G:\\YEAR 3\\Application Development\\Coursework\\Wealth-Watcher\\Services\\IDebtService.cs",
+              "RelativeDocumentMoniker": "Services\\IDebtService.cs",
+              "ToolTip": "G:\\YEAR 3\\Application Development\\Coursework\\Wealth-Watcher\\Services\\IDebtService.cs",
+              "RelativeToolTip": "Services\\IDebtService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-16T11:42:35.754Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "G:\\YEAR 3\\Application Development\\Coursework\\Wealth-Watcher\\Services\\IUserService.cs",
+              "RelativeDocumentMoniker": "Services\\IUserService.cs",
+              "ToolTip": "G:\\YEAR 3\\Application Development\\Coursework\\Wealth-Watcher\\Services\\IUserService.cs",
+              "RelativeToolTip": "Services\\IUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-16T10:05:16.092Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ITransactionService.cs",
+              "DocumentMoniker": "G:\\YEAR 3\\Application Development\\Coursework\\Wealth-Watcher\\Services\\ITransactionService.cs",
+              "RelativeDocumentMoniker": "Services\\ITransactionService.cs",
+              "ToolTip": "G:\\YEAR 3\\Application Development\\Coursework\\Wealth-Watcher\\Services\\ITransactionService.cs",
+              "RelativeToolTip": "Services\\ITransactionService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-16T10:09:11.736Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Login.razor",
+              "DocumentMoniker": "G:\\YEAR 3\\Application Development\\Coursework\\Wealth-Watcher\\Components\\Pages\\Login.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Login.razor",
+              "ToolTip": "G:\\YEAR 3\\Application Development\\Coursework\\Wealth-Watcher\\Components\\Pages\\Login.razor",
+              "RelativeToolTip": "Components\\Pages\\Login.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-16T09:49:30.272Z"
             },
             {
               "$type": "Document",
@@ -306,8 +291,7 @@
               "RelativeToolTip": "MauiProgram.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-16T04:51:40.73Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-16T04:51:40.73Z"
             },
             {
               "$type": "Document",
@@ -319,8 +303,7 @@
               "RelativeToolTip": "Model\\Transaction.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-16T09:47:52.619Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-16T09:47:52.619Z"
             },
             {
               "$type": "Document",
@@ -332,8 +315,7 @@
               "RelativeToolTip": "Model\\Debt.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-16T04:40:49.806Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-16T04:40:49.806Z"
             }
           ]
         }

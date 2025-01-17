@@ -30,7 +30,7 @@
     <AppXManifest Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-01-16T16:55:18.248</Modified>
+      <Modified>2025-01-17T04:07:26.007</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -44,11 +44,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Wealth-Watcher.dll">
       <PackagePath>Wealth-Watcher.dll</PackagePath>
-      <Modified>2025-01-16T16:53:42.607</Modified>
+      <Modified>2025-01-16T17:50:58.905</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>Wealth-Watcher.exe</PackagePath>
-      <Modified>2025-01-16T16:53:42.613</Modified>
+      <Modified>2025-01-16T17:50:59.012</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="G:\YEAR 3\Application Development\Coursework\Wealth-Watcher\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>

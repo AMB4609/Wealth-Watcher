@@ -1,18 +1,10 @@
 [
   {
     "userId": 1,
-    "userName": "amogh",
+    "userName": "Amogh",
     "password": "test123",
     "currencyType": "USD",
     "gender": "Male",
-    "balance": 1010000.0
-  },
-  {
-    "userId": 2,
-    "userName": "amb",
-    "password": "test123",
-    "currencyType": "USD",
-    "gender": "Male",
-    "balance": 10000.0
+    "balance": 12735.0
   }
 ]
